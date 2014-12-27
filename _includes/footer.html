@@ -1,0 +1,19 @@
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    {% for network in site.social %}
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-{{ network.title }}"></i></a>
+                    {% endfor %}
+                </p>
+            </div>
+
+        </div><! --/row -->
+                <h5>Theme <a href="https://github.com/st4ple/solid-jekyll">solid</a> created by <a href="http://www.blacktie.co/">blacktie</a>
+
+                </h5>
+    </div><! --/container -->
+</div><! --/footerwrap -->
