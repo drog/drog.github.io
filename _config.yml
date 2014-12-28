@@ -2,27 +2,28 @@
 
 # Site settings
 title: drog blog
-description: "Learning"
+description: "blog of programming and linux"
 analytics: UA-45813922-4
 baseurl: "" #important: start with /
 url: "http://drog.github.io/"
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 kramdown:
   input: GFM
-exclude: ['README.md']
+exclude: ['README.md','bower.json','package.json','bower_components','node_modules','gulpfile.js','customs']
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
 colors:  #in hex code if not noted else
-  primary: "#F70031" #"#F70031"
-  primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.
-  secondary: "#33004D" #"#33004D"
-  link: "#F70031"#444444
-  link_hover: "#FF4136"
-  footer_heading: "#ffffff"
-  footer_content: "#ffffff"
+  primary: "#DE1B1B"
+  primary_rgb: "206,206,206" #rgb of the primary. Needed in some places for the transparency effect.
+  secondary: "#2B2B2B"
+  link: "#DE1B1B"
+  link_hover: "#BBD700"
+  footer_heading: "#F6F6F6"
+  footer_content: "#F6F6F6"
 
 
 ### CONTACT SETTINGS ###
@@ -33,3 +34,6 @@ social:
     url: https://github.com/drog
   - title: linkedin
     url: https://www.linkedin.com/profile/view?id=302314974
+
+disqus:
+    shortname: 'httpdroggithubio'

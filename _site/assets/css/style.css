@@ -1,13 +1,3 @@
-/*	################################################################
-
-	Author: Carlos Alvarez
-	URL: http://alvarez.is
-
-	Project Name: SOLID - Bootstrap 3 Theme
-	Version: 1.0
-	URL: http://alvarez.is
-
-################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 
@@ -24,7 +14,7 @@ body {
 	background: #ffffff;
 	margin: 0;
 	height: 100%;
-	color: #33004D;
+	color: #2B2B2B;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	}
@@ -41,7 +31,7 @@ p {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
-	color: #33004D;
+	color: #2B2B2B;
 	margin-top: 10px;
 }
 
@@ -51,7 +41,7 @@ img {
 }
 
 a {
-    color:#F70031;
+    color:#DE1B1B;
     padding: 0;
 	margin: 0;
 	text-decoration: none;
@@ -64,18 +54,18 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color:#FF4136;
+  color:#BBD700;
 }
 
 ::-moz-selection  {
 	color: #fff;
 	text-shadow:none;
-	background:#33004D;
+	background:#2B2B2B;
 }
 ::selection {
 	color: #fff;
 	text-shadow:none;
-	background:#33004D;
+	background:#2B2B2B;
 }
 
 .centered {
@@ -93,7 +83,7 @@ a:focus {
 
 .navbar-brand {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 900;
+	font-weight: 700;
 
 }
 
@@ -103,26 +93,26 @@ a:focus {
 
 .navbar-default .navbar-nav > li > a {
 	color: white;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 12px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #F70031;
+	color: #DE1B1B;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #F70031;
+	color: #DE1B1B;
 	background-color: transparent;
 }
 
 .navbar-default {
-	background-color: #33004D;
+	background-color: #2B2B2B;
 	border-color: transparent;
 }
 
 .dropdown-menu {
-	background: #33004D;
+	background: #2B2B2B;
 }
 
 .dropdown-menu > li > a {
@@ -133,8 +123,8 @@ a:focus {
 
 .btn-theme {
   color: #fff;
-  background-color: #33004D;
-  border-color: #33004D;
+  background-color: #2B2B2B;
+  border-color: #2B2B2B;
   margin: 4px;
 }
 .btn-theme:hover,
@@ -143,8 +133,8 @@ a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #F70031;
-  border-color: #F70031;
+  background-color: #DE1B1B;
+  border-color: #DE1B1B;
 }
 
 .dmbutton:hover,
@@ -194,7 +184,7 @@ a:focus {
 }
 
 .hline {
-	border-bottom: 2px solid #33004D;
+	border-bottom: 2px solid #2B2B2B;
 }
 
 .hline-w {
@@ -206,7 +196,7 @@ a:focus {
 ################################################################# */
 
 #headerwrap {
-	background-color: #F70031;
+	background-color: #DE1B1B;
 	min-height: 550px;
 	padding-top: 100px;
 	padding-bottom: 0px;
@@ -234,7 +224,7 @@ a:focus {
 }
 
 #service i {
-	color: #F70031;
+	color: #DE1B1B;
 	font-size: 60px;
 	padding: 15px;
 }
@@ -258,15 +248,15 @@ a:focus {
 {
 	height:100%;
 	width:100%;
-	background-color:#F70031;
-	background-color:rgba(0,179,254,.9);
+	background-color:#DE1B1B;
+	background-color:rgba(206,206,206,.9);
 	text-align:center;
 }
 
 /* Testimonials Wrap */
 #twrapback {
-    background-color: #F70031;
-    background-color:rgba(0,179,254,.8);
+    background-color: #DE1B1B;
+    background-color:rgba(206,206,206,.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -323,26 +313,25 @@ a:focus {
 /* Footer */
 #footerwrap {
 	padding-top: 10px;
-	padding-bottom: 10px;
-	background: #33004D;
+	background: #2B2B2B;
 }
 
 #footerwrap p {
-	color: #ffffff;
+	color: #F6F6F6;
 }
 
 #footerwrap h4 {
-	color: #ffffff;
+	color: #F6F6F6;
 }
 
 #footerwrap i {
 	font-size: 30px;
-	color: #ffffff;
+	color: #F6F6F6;
 	padding-right: 25px;
 }
 
 #footerwrap i:hover {
-	color: #F70031
+	color: #DE1B1B
 }
 
 /*	################################################################
@@ -351,7 +340,7 @@ a:focus {
 /* General Tweaks */
 
 .ctitle {
-	color: #F70031;
+	color: #DE1B1B;
 	font-weight: 700;
 	margin-bottom: 15px;
 }
@@ -367,7 +356,7 @@ csmall {
 }
 
 .badge-theme {
-	background: #F70031;
+	background: #DE1B1B;
 }
 
 /* Blog Page */
