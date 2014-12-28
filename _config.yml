@@ -1,23 +1,26 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: Blog of drog
-description: "Blog of programation"
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
+title: drog blog
+description: "Learning"
+analytics: UA-45813922-4
 baseurl: "" #important: start with /
 url: "http://drog.github.io/"
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+exclude: ['README.md']
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
 colors:  #in hex code if not noted else
-  primary: "#FF4136" #"#F70031"
+  primary: "#F70031" #"#F70031"
   primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.
-  secondary: "#111111" #"#33004D"
-  link: "#FF4136"
-  link_hover: "#FF851B"
+  secondary: "#33004D" #"#33004D"
+  link: "#F70031"#444444
+  link_hover: "#FF4136"
   footer_heading: "#ffffff"
   footer_content: "#ffffff"
 
@@ -30,9 +33,3 @@ social:
     url: https://github.com/drog
   - title: linkedin
     url: https://www.linkedin.com/profile/view?id=302314974
-
-### GENERAL DATA FOR VARIOUS LOCATIONS ###
-
-# Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
-about: "ola k ase"
-

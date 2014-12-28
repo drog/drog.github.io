@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>drog blog - Archlinux config</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/assets/js/modernizr.js"></script>
+</head>
+
+    <body>
+        <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">drog blog</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">BLOG</a></li>
+        <li ><a href="/about/">ABOUT</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+            <div class="container mtb">
+    <div class="row">
+        <! -- SINGLE POST -->
+        <div class="col-lg-9">
+            <! -- Blog Post  -->
+            <a href="/blog/archlinux/archlinux-config"><h1 class="ctitle">Archlinux config</h1></a>
+            <p><csmall>Dec 27, 2014. | By: drog</csmall></p>
+
+            <p>All steps i reproduced to set my <a href="https://www.archlinux.org/">Archlinux</a> config.<br />
+You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.</p>
+
+<h2 id="config-files">Config files</h2>
+<ul>
+  <li><a href="https://github.com/drog/config/tree/master/etc/bumblebee">Bumblebee config</a> to avoid errors</li>
+  <li><a href="https://github.com/drog/config/tree/master/etc/lightdm">lightdm config</a> with better integration with xfce4</li>
+  <li><a href="https://github.com/drog/config/blob/master/etc/pulse/daemon.conf">pulseaudio config</a> for better audio (?)</li>
+  <li><a href="https://github.com/drog/config/blob/master/home/diego/.conkyrc">conkyrc config</a></li>
+  <li><a href="https://github.com/drog/config/tree/master/home/diego/.config/gconf/apps/guake">guake config</a> with color shceme from <a href="https://github.com/tatetian/guake-colors-elementary-os">guake colors elementary-os</a></li>
+  <li><a href="https://github.com/drog/config/tree/master/home/diego/.zsh">zsh config</a> files</li>
+  <li><a href="https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings">Sublime Text 3 config</a></li>
+  <li><strong>and others</strong> config’s files<br />
+<!--more--></li>
+</ul>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<h4 id="archlinux-desktop">Archlinux desktop</h4>
+<p><a href="https://github.com/drog/config/raw/master/screenshots/desktop.png"><img src="https://github.com/drog/config/raw/master/screenshots/desktop.png" width="240px" alt="Archlinux with xfce4" /></a></p>
+
+<h4 id="guake-colors">Guake colors</h4>
+<p><a href="https://github.com/drog/config/raw/master/screenshots/guake.png"><img src="https://github.com/drog/config/raw/master/screenshots/guake.png" width="240px" alt="Guake colors" /></a></p>
+
+<h2 id="zsh">Zsh</h2>
+<pre><code class="language-bash">pacman -S zsh zsh-completions
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+sudo wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
+</code></pre>
+
+<h2 id="xfce4-config">Xfce4 Config</h2>
+
+<h3 id="xfce4-extras">1. xfce4 extras</h3>
+
+<pre><code class="language-bash">#xfce4 devel
+yaourt -S libxfce4ui-devel xfwm4-devel xfdesktop-devel xfce4-settings-devel xfce4-session-devel
+
+pacman -S lxtask ffmpegthumbnailer poppler-glib gvfs gvfs-smb sshfs xdg-user-dirs xdg-user-dirs-gtk guake pavucontrol pulseaudio-alsa lib32-alsa-plugins lib32-libpulse
+yaourt -S xfce4-volumed-pulse xfce4-whiskermenu-plugin menulibre
+xdg-user-dirs-update
+xdg-user-dirs-gtk-update
+</code></pre>
+
+<h3 id="xfce4-eyecandy">2. xfce4 eyecandy</h3>
+
+<pre><code class="language-bash">yaourt -S xfce-theme-greybird xcursor-human elementary-xfce-icons-git
+</code></pre>
+
+<h4 id="cursor-theme">2.1 Cursor theme</h4>
+
+<p><code>nano /usr/share/icons/default/index.theme</code></p>
+
+<pre><code class="language-bash">[Icon Theme]
+Inherits=Human
+</code></pre>
+
+<h3 id="xfce4-lightdm-integration">3. xfce4 Lightdm integration</h3>
+
+<pre><code class="language-bash">pacman -S lightdm-gtk2-greeter light-locker
+</code></pre>
+<p><code>nano /etc/lightdm/lightdm.conf</code></p>
+
+<pre><code class="language-bash">[SeatDefaults]
+greeter-session=lightdm-gtk-greeter
+</code></pre>
+
+<h4 id="wallpaper-lightdm">3.1 Wallpaper lightdm</h4>
+
+<p><code>cp path/to/wallpaper.png /usr/share/pixmaps/wallpaper.png</code></p>
+
+<h4 id="lightdm-gtk-greeter">3.2 lightdm-gtk-greeter</h4>
+
+<p><code>nano /etc/lightdm/lightdm-gtk-greeter.conf</code></p>
+
+<pre><code class="language-bash">[greeter]
+background= /usr/share/pixmaps/wallpaper.png
+theme-name=Greybird
+icon-theme-name=elementary-xfce
+</code></pre>
+
+<h3 id="xfce4-lightdm-lightlock">4. xfce4 Lightdm lightlock</h3>
+
+<h4 id="create-systemd-service">4.1  Create systemd service</h4>
+
+<p><code>nano /etc/systemd/system/lock.service</code></p>
+
+<pre><code class="language-bash">[Unit]
+Description=Lock X session
+Before=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xflock4
+
+[Install]
+WantedBy=suspend.target
+</code></pre>
+
+<h4 id="enable-systemd-service">4.2  Enable systemd service</h4>
+
+<p><code>systemctl enable lock</code></p>
+
+<h4 id="add-light-locker-to-xflock4-script">4.3 Add light-locker to xflock4 script</h4>
+
+<p><code>nano /usr/bin/xflock4</code></p>
+
+<pre><code class="language-bash">#!/bin/sh
+light-locker-command -l
+</code></pre>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?id=180985">Source Xlock config</a></p>
+
+<h2 id="nvidia-optimus-bumblebee">nVidia Optimus Bumblebee</h2>
+
+<pre><code class="language-bash">pacman -S bumblebee bbswitch primus lib32-primus lib32-virtualgl nvidia lib32-nvidia-utils
+gpasswd -a diego bumblebee
+systemctl enable bumblebeed
+</code></pre>
+<p><code>nano /etc/mkinitcpio.conf </code></p>
+
+<pre><code class="language-bash">MODULES="i915 bbswitch"
+</code></pre>
+<p><code>nano /etc/default/grub</code></p>
+
+<pre><code class="language-bash">GRUB_CMDLINE_LINUX_DEFAULT="quiet rcutree.rcu_idle_gp_delay=1"
+</code></pre>
+<p><code>lspci | grep VGA | grep NVIDIA</code></p>
+
+<p><code>nano /etc/bumblebee/xorg.conf.nvidia</code></p>
+
+<pre><code class="language-bash">BusID "PCI:01:00:0"
+</code></pre>
+<p><a href="https://bbs.archlinux.org/viewtopic.php?pid=1326090#p1326090">Source Bumblebee config</a></p>
+
+<h2 id="linux-ck-brain-fuck-scheduler-bfs"><a href="https://wiki.archlinux.org/index.php/linux-ck">linux-ck</a> Brain Fuck Scheduler (BFS)</h2>
+
+<pre><code class="language-bash">pacman-key -r 5EE46C4C
+pacman-key --lsign-key 5EE46C4C
+pacman -S linux-ck-ivybridge linux-ck-ivybridge-headers nvidia-ck-ivybridge
+yaourt -S bbswitch-ck acpi_call-ck
+grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+
+<h2 id="packages-for-programming">Packages for programming</h2>
+
+<pre><code class="language-bash">pacman -S mariadb mongodb ruby openssh nodejs apache php php-apache php-mcrypt php-gd php-composer gdb virtualbox jdk7-openjdk jre7-openjdk jre7-openjdk-headlessc clang qtcreator
+
+pacman -S postgresql php-pgsql pgadmin3
+
+pacman -S xampp
+sudo ln -s ~/public_html /opt/lampp/htdocs/$USER
+
+yaourt -S sublime-text-dev virtualbox-ext-oracle
+
+npm install -g bower gulp grunt-cli yo sails generator-gulp-angular  generator-angular
+
+#games
+pacman -S tiled tinyxml sdl sdl_image sdl_gfx sfml
+
+#Networking
+pacman -S nmap wireshark-cli wireshark-gtk john aircrack-ng
+</code></pre>
+
+<h3 id="sublime-text-3-config">Sublime Text 3 config</h3>
+
+<h4 id="install--package-controlhttpssublimewbondnetinstallation">1. Install  <a href="https://sublime.wbond.net/installation">Package Control</a></h4>
+
+<p>Open Sublime Text 3 and hit <code>ctrl+´</code> shortcut or the <code>View &gt; Show Console</code> menu, then enter the following:</p>
+
+<pre><code class="language-bash">import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+</code></pre>
+
+<h4 id="install-and-load-packages-ctrl-shift-p">2.Install and load packages (<code>ctrl-Shift-P</code>)</h4>
+<ul>
+  <li><a href="https://github.com/facelessuser/BracketHighlighter">BracketHighlighter</a></li>
+  <li><a href="https://github.com/weslly/ColorPicker">ColorPicker</a></li>
+  <li><a href="https://github.com/SublimeCodeIntel/SublimeCodeIntel">SublimeCodeIntel</a></li>
+</ul>
+
+<h4 id="load-user-settings-from-sublime-text-3-config">3. Load user settings from <a href="https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings">Sublime Text 3 config</a></h4>
+
+<h3 id="postgresql-config">PostgreSQL config</h3>
+
+<pre><code class="language-bash">sed -i '/pgsql.so/s/^;//' /etc/php/php.ini
+su - postgres -c "initdb --locale es_CL.UTF-8 -D '/var/lib/postgres/data'"
+chown -R postgres:postgres /var/lib/postgres
+systemctl start postgresql
+</code></pre>
+
+<h3 id="mariadb-config">Mariadb config</h3>
+<p><code>systemctl start mysqld &amp;&amp;  /usr/bin/mysql_secure_installation</code></p>
+
+<h2 id="power-managment">Power managment</h2>
+
+<pre><code class="language-bash">pacman -S  tlp lm_sensors smartmontools lsb-release ethtool iw
+systemctl enable tlp
+sensors-detect
+</code></pre>
+
+<h2 id="network-manager">Network Manager</h2>
+
+<pre><code class="language-bash">pacman -S networkmanager networkmanager-openconnect network-manager-applet dnsmasq
+systemctl enable NetworkManager
+</code></pre>
+
+<h2 id="bluetooth">Bluetooth</h2>
+
+<pre><code class="language-bash">yaourt -S blueman-git
+systemctl enable bluetooth
+</code></pre>
+
+<h2 id="firewall-configuration">Firewall Configuration</h2>
+
+<pre><code class="language-bash">pacman -S iptables
+systemctl enable iptables &amp;&amp; systemctl start iptables
+</code></pre>
+
+<p>Set rules</p>
+
+<pre><code class="language-bash">#block all conections
+iptables -P INPUT DROP
+#allow all conections for localhost
+iptables -A INPUT -i lo -j ACCEPT
+#allow all conections established by localhost
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</code></pre>
+
+<p>Save rules</p>
+
+<pre><code class="language-bash">iptables-save &gt; /etc/iptables/iptables.rules
+systemctl reload iptables
+</code></pre>
+
+<h2 id="other-stuff">Other stuff</h2>
+
+<pre><code class="language-bash">pacman -S conky clementine gpicview wine winetricks wine_gecko xdelta3 pkgstats firefox-adblock-plus  firefox-i18n-es-cl transmission-gtk filezilla xchat  wget mpv libva libva-intel-driver thunderbird-i18n-es-ar  gtk-recordmydesktop skype galculator bleachbit preload ntfs-3g archey3 chromium flashplugin
+#fix errors logs wine
+pacman -S lib32-ncurses lib32-mpg123
+yaourt -S profile-sync-daemon anything-sync-daemon chromium-pepper-flash
+#gaming
+pacman -S steam desmume
+
+#Multimedia extras
+pacman -S  gimp gimp-plugin-gmic inkscape blender mkvtoolnix-gtk soundconverter
+yaourt -S jdownloader2 teamspeak3 animecheck-git radiotray
+#Ofimatic
+pacman -S libreoffice-fresh-es hunspell-es hyphen-es libmythes mythes-es
+
+#LaTeX
+pacman -S texlive-core texlive-bibtexextra texlive-htmlxml texlive-humanities texlive-latexextra texlive-pictures texlive-publishers  texlive-science
+</code></pre>
+
+<h2 id="compressed-files">Compressed Files</h2>
+
+<pre><code class="language-bash">pacman -S file-roller
+pacman -S unrar zip unzip xz tar gzip bzip2 rpmextract
+</code></pre>
+
+<h2 id="better-fonts-with-infinality-fonts">Better Fonts with <a href="https://wiki.archlinux.org/index.php/Infinality">Infinality fonts</a></h2>
+
+<p><code>nano /etc/pacman.con</code></p>
+
+<pre><code class="language-bash">[infinality-bundle]
+Server = http://bohoomil.com/repo/$arch
+
+[infinality-bundle-multilib]
+Server = http://bohoomil.com/repo/multilib/$arch
+
+[infinality-bundle-fonts]
+Server = http://bohoomil.com/repo/fonts
+</code></pre>
+
+<pre><code class="language-bash">pacman -S infinality-bundle infinality-bundle-multilib
+
+pacman -S ibfonts-meta-base ibfonts-meta-extended-lt adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-meslo-fonts-ibx
+
+#Oriental fonts
+pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts
+</code></pre>
+
+
+
+            <div class="spacing"></div>
+            <!-- <h6>SHARE:</h6>
+            <p class="share">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-tumblr"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+            </p> -->
+        </div><! --/col-lg-8 -->
+
+        <div class="col-lg-3 pull-right">
+   <!--  <h4>Search</h4>
+    <div class="hline"></div>
+        <p>
+            <br/>
+            <input type="text" class="form-control" placeholder="Search something">
+        </p>
+    <div class="spacing"></div> -->
+    <h4>Subscribe</h4>
+    <div class="hline"></div>
+        <p>
+            <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
+        </p>
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    
+        <p>
+            <a href="/category/#archlinux"><i class="fa fa-angle-right"></i> Archlinux</a>
+            <span class="badge badge-theme pull-right">1</span>
+        </p>
+    
+
+    <div class="spacing"></div>
+
+    <h4>Recent Posts</h4>
+    <div class="hline"></div>
+        <ul class="popular-posts">
+            
+            <li>
+                    <p><a href="/blog/archlinux/archlinux-config">Archlinux config</a></p>
+                <em>Posted on 27 Dec 2014</em>
+            </li>
+            
+            <li>
+                    <p><a href="/blog/hello-world">Hello World!</a></p>
+                <em>Posted on 27 Dec 2014</em>
+            </li>
+            
+        </ul>
+
+    <div class="spacing"></div>
+
+    <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+    
+            <a class="btn btn-theme" href="/tags/#hello world" role="button">Hello world (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#Archlinux" role="button">Archlinux (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#linux" role="button">Linux (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#xfce4" role="button">Xfce4 (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#config" role="button">Config (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#dotfiles" role="button">Dotfiles (1)</a>
+        
+    </p>
+</div>
+
+    </div><! --/row -->
+</div><! --/container -->
+
+        <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="https://github.com/drog" class="btn-social btn-outline"><i class="fa fa-github"></i></a>
+                    
+                        <a href="https://www.linkedin.com/profile/view?id=302314974" class="btn-social btn-outline"><i class="fa fa-linkedin"></i></a>
+                    
+                </p>
+            </div>
+
+        </div><! --/row -->
+                <h5>Theme based in <a href="https://github.com/st4ple/solid-jekyll">solid</a> created by <a href="http://www.blacktie.co/">blacktie</a>
+
+                </h5>
+    </div><! --/container -->
+</div><! --/footerwrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/retina-1.1.0.js"></script>
+<script src="/assets/js/jquery.hoverdir.js"></script>
+<script src="/assets/js/jquery.hoverex.min.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45813922-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+    </body>
+</html>

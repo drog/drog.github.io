@@ -1,26 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog of drog</title>
-    <description>Blog of programation</description>
+    <title>drog blog</title>
+    <description>Learning</description>
     <link>http://drog.github.io//</link>
     <atom:link href="http://drog.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 27 Dec 2014 16:50:51 -0300</pubDate>
-    <lastBuildDate>Sat, 27 Dec 2014 16:50:51 -0300</lastBuildDate>
+    <pubDate>Sat, 27 Dec 2014 23:41:33 -0300</pubDate>
+    <lastBuildDate>Sat, 27 Dec 2014 23:41:33 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Blog: Hello World!</title>
-        <description>&lt;p&gt;This is my first post&lt;/p&gt;
+        <title>Blog: Archlinux config</title>
+        <description>&lt;p&gt;All steps i reproduced to set my &lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Archlinux&lt;/a&gt; config.&lt;br /&gt;
+You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.&lt;/p&gt;
+
+&lt;h2 id=&quot;config-files&quot;&gt;Config files&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/etc/bumblebee&quot;&gt;Bumblebee config&lt;/a&gt; to avoid errors&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/etc/lightdm&quot;&gt;lightdm config&lt;/a&gt; with better integration with xfce4&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/blob/master/etc/pulse/daemon.conf&quot;&gt;pulseaudio config&lt;/a&gt; for better audio (?)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/blob/master/home/diego/.conkyrc&quot;&gt;conkyrc config&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/gconf/apps/guake&quot;&gt;guake config&lt;/a&gt; with color shceme from &lt;a href=&quot;https://github.com/tatetian/guake-colors-elementary-os&quot;&gt;guake colors elementary-os&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.zsh&quot;&gt;zsh config&lt;/a&gt; files&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;and others&lt;/strong&gt; config’s files&lt;br /&gt;
+&lt;!--more--&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;screenshots&quot;&gt;Screenshots&lt;/h2&gt;
+
+&lt;h4 id=&quot;archlinux-desktop&quot;&gt;Archlinux desktop&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/drog/config/raw/master/screenshots/desktop.png&quot;&gt;&lt;img src=&quot;https://github.com/drog/config/raw/master/screenshots/desktop.png&quot; width=&quot;240px&quot; alt=&quot;Archlinux with xfce4&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;guake-colors&quot;&gt;Guake colors&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/drog/config/raw/master/screenshots/guake.png&quot;&gt;&lt;img src=&quot;https://github.com/drog/config/raw/master/screenshots/guake.png&quot; width=&quot;240px&quot; alt=&quot;Guake colors&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;zsh&quot;&gt;Zsh&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S zsh zsh-completions
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+sudo wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;xfce4-config&quot;&gt;Xfce4 Config&lt;/h2&gt;
+
+&lt;h3 id=&quot;xfce4-extras&quot;&gt;1. xfce4 extras&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#xfce4 devel
+yaourt -S libxfce4ui-devel xfwm4-devel xfdesktop-devel xfce4-settings-devel xfce4-session-devel
+
+pacman -S lxtask ffmpegthumbnailer poppler-glib gvfs gvfs-smb sshfs xdg-user-dirs xdg-user-dirs-gtk guake pavucontrol pulseaudio-alsa lib32-alsa-plugins lib32-libpulse
+yaourt -S xfce4-volumed-pulse xfce4-whiskermenu-plugin menulibre
+xdg-user-dirs-update
+xdg-user-dirs-gtk-update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;xfce4-eyecandy&quot;&gt;2. xfce4 eyecandy&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;yaourt -S xfce-theme-greybird xcursor-human elementary-xfce-icons-git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;cursor-theme&quot;&gt;2.1 Cursor theme&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;nano /usr/share/icons/default/index.theme&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[Icon Theme]
+Inherits=Human
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;xfce4-lightdm-integration&quot;&gt;3. xfce4 Lightdm integration&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S lightdm-gtk2-greeter light-locker
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;nano /etc/lightdm/lightdm.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[SeatDefaults]
+greeter-session=lightdm-gtk-greeter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;wallpaper-lightdm&quot;&gt;3.1 Wallpaper lightdm&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;cp path/to/wallpaper.png /usr/share/pixmaps/wallpaper.png&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;lightdm-gtk-greeter&quot;&gt;3.2 lightdm-gtk-greeter&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;nano /etc/lightdm/lightdm-gtk-greeter.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[greeter]
+background= /usr/share/pixmaps/wallpaper.png
+theme-name=Greybird
+icon-theme-name=elementary-xfce
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;xfce4-lightdm-lightlock&quot;&gt;4. xfce4 Lightdm lightlock&lt;/h3&gt;
+
+&lt;h4 id=&quot;create-systemd-service&quot;&gt;4.1  Create systemd service&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;nano /etc/systemd/system/lock.service&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[Unit]
+Description=Lock X session
+Before=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xflock4
+
+[Install]
+WantedBy=suspend.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;enable-systemd-service&quot;&gt;4.2  Enable systemd service&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;systemctl enable lock&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;add-light-locker-to-xflock4-script&quot;&gt;4.3 Add light-locker to xflock4 script&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;nano /usr/bin/xflock4&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#!/bin/sh
+light-locker-command -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=180985&quot;&gt;Source Xlock config&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;nvidia-optimus-bumblebee&quot;&gt;nVidia Optimus Bumblebee&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S bumblebee bbswitch primus lib32-primus lib32-virtualgl nvidia lib32-nvidia-utils
+gpasswd -a diego bumblebee
+systemctl enable bumblebeed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;nano /etc/mkinitcpio.conf &lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;MODULES=&quot;i915 bbswitch&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;nano /etc/default/grub&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet rcutree.rcu_idle_gp_delay=1&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;lspci | grep VGA | grep NVIDIA&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;nano /etc/bumblebee/xorg.conf.nvidia&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;BusID &quot;PCI:01:00:0&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?pid=1326090#p1326090&quot;&gt;Source Bumblebee config&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;linux-ck-brain-fuck-scheduler-bfs&quot;&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/linux-ck&quot;&gt;linux-ck&lt;/a&gt; Brain Fuck Scheduler (BFS)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman-key -r 5EE46C4C
+pacman-key --lsign-key 5EE46C4C
+pacman -S linux-ck-ivybridge linux-ck-ivybridge-headers nvidia-ck-ivybridge
+yaourt -S bbswitch-ck acpi_call-ck
+grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;packages-for-programming&quot;&gt;Packages for programming&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S mariadb mongodb ruby openssh nodejs apache php php-apache php-mcrypt php-gd php-composer gdb virtualbox jdk7-openjdk jre7-openjdk jre7-openjdk-headlessc clang qtcreator
+
+pacman -S postgresql php-pgsql pgadmin3
+
+pacman -S xampp
+sudo ln -s ~/public_html /opt/lampp/htdocs/$USER
+
+yaourt -S sublime-text-dev virtualbox-ext-oracle
+
+npm install -g bower gulp grunt-cli yo sails generator-gulp-angular  generator-angular
+
+#games
+pacman -S tiled tinyxml sdl sdl_image sdl_gfx sfml
+
+#Networking
+pacman -S nmap wireshark-cli wireshark-gtk john aircrack-ng
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;sublime-text-3-config&quot;&gt;Sublime Text 3 config&lt;/h3&gt;
+
+&lt;h4 id=&quot;install--package-controlhttpssublimewbondnetinstallation&quot;&gt;1. Install  &lt;a href=&quot;https://sublime.wbond.net/installation&quot;&gt;Package Control&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Open Sublime Text 3 and hit &lt;code&gt;ctrl+´&lt;/code&gt; shortcut or the &lt;code&gt;View &amp;gt; Show Console&lt;/code&gt; menu, then enter the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;import urllib.request,os,hashlib; h = &#39;7183a2d3e96f11eeadd761d777e62404&#39; + &#39;e330c659d4bb41d3bdf022e94cab3cd0&#39;; pf = &#39;Package Control.sublime-package&#39;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &#39;http://packagecontrol.io/&#39; + pf.replace(&#39; &#39;, &#39;%20&#39;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&#39;Error validating download (got %s instead of %s), please try manual install&#39; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &#39;wb&#39; ).write(by)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;install-and-load-packages-ctrl-shift-p&quot;&gt;2.Install and load packages (&lt;code&gt;ctrl-Shift-P&lt;/code&gt;)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/facelessuser/BracketHighlighter&quot;&gt;BracketHighlighter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/weslly/ColorPicker&quot;&gt;ColorPicker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeCodeIntel/SublimeCodeIntel&quot;&gt;SublimeCodeIntel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;load-user-settings-from-sublime-text-3-config&quot;&gt;3. Load user settings from &lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h3 id=&quot;postgresql-config&quot;&gt;PostgreSQL config&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sed -i &#39;/pgsql.so/s/^;//&#39; /etc/php/php.ini
+su - postgres -c &quot;initdb --locale es_CL.UTF-8 -D &#39;/var/lib/postgres/data&#39;&quot;
+chown -R postgres:postgres /var/lib/postgres
+systemctl start postgresql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;mariadb-config&quot;&gt;Mariadb config&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;systemctl start mysqld &amp;amp;&amp;amp;  /usr/bin/mysql_secure_installation&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;power-managment&quot;&gt;Power managment&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S  tlp lm_sensors smartmontools lsb-release ethtool iw
+systemctl enable tlp
+sensors-detect
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;network-manager&quot;&gt;Network Manager&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S networkmanager networkmanager-openconnect network-manager-applet dnsmasq
+systemctl enable NetworkManager
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;bluetooth&quot;&gt;Bluetooth&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;yaourt -S blueman-git
+systemctl enable bluetooth
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;firewall-configuration&quot;&gt;Firewall Configuration&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S iptables
+systemctl enable iptables &amp;amp;&amp;amp; systemctl start iptables
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Set rules&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#block all conections
+iptables -P INPUT DROP
+#allow all conections for localhost
+iptables -A INPUT -i lo -j ACCEPT
+#allow all conections established by localhost
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Save rules&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;iptables-save &amp;gt; /etc/iptables/iptables.rules
+systemctl reload iptables
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;other-stuff&quot;&gt;Other stuff&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S conky clementine gpicview wine winetricks wine_gecko xdelta3 pkgstats firefox-adblock-plus  firefox-i18n-es-cl transmission-gtk filezilla xchat  wget mpv libva libva-intel-driver thunderbird-i18n-es-ar  gtk-recordmydesktop skype galculator bleachbit preload ntfs-3g archey3 chromium flashplugin
+#fix errors logs wine
+pacman -S lib32-ncurses lib32-mpg123
+yaourt -S profile-sync-daemon anything-sync-daemon chromium-pepper-flash
+#gaming
+pacman -S steam desmume
+
+#Multimedia extras
+pacman -S  gimp gimp-plugin-gmic inkscape blender mkvtoolnix-gtk soundconverter
+yaourt -S jdownloader2 teamspeak3 animecheck-git radiotray
+#Ofimatic
+pacman -S libreoffice-fresh-es hunspell-es hyphen-es libmythes mythes-es
+
+#LaTeX
+pacman -S texlive-core texlive-bibtexextra texlive-htmlxml texlive-humanities texlive-latexextra texlive-pictures texlive-publishers  texlive-science
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;compressed-files&quot;&gt;Compressed Files&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S file-roller
+pacman -S unrar zip unzip xz tar gzip bzip2 rpmextract
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;better-fonts-with-infinality-fonts&quot;&gt;Better Fonts with &lt;a href=&quot;https://wiki.archlinux.org/index.php/Infinality&quot;&gt;Infinality fonts&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;nano /etc/pacman.con&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[infinality-bundle]
+Server = http://bohoomil.com/repo/$arch
+
+[infinality-bundle-multilib]
+Server = http://bohoomil.com/repo/multilib/$arch
+
+[infinality-bundle-fonts]
+Server = http://bohoomil.com/repo/fonts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S infinality-bundle infinality-bundle-multilib
+
+pacman -S ibfonts-meta-base ibfonts-meta-extended-lt adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-meslo-fonts-ibx
+
+#Oriental fonts
+pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts
+&lt;/code&gt;&lt;/pre&gt;
+
 </description>
-        <pubDate>Sat, 27 Dec 2014 12:29:46 -0300</pubDate>
-        <link>http://drog.github.io//blog/hello%20world/hello-world</link>
-        <guid isPermaLink="true">http://drog.github.io//blog/hello%20world/hello-world</guid>
+        <pubDate>Sat, 27 Dec 2014 19:45:52 -0300</pubDate>
+        <link>http://drog.github.io//blog/archlinux/archlinux-config</link>
+        <guid isPermaLink="true">http://drog.github.io//blog/archlinux/archlinux-config</guid>
+        
+        <category>Archlinux</category>
+        
+        <category>linux</category>
+        
+        <category>xfce4</category>
+        
+        <category>config</category>
+        
+        <category>dotfiles</category>
         
         
         <category>blog</category>
         
+        <category>archlinux</category>
+        
+      </item>
+    
+      <item>
+        <title>Blog: Hello World!</title>
+        <description>&lt;p&gt;Hello everyone, this is my first post here. I decided create my blog in github to practice with git, learn some aspects of ruby with jekyll and for fun.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 27 Dec 2014 12:29:46 -0300</pubDate>
+        <link>http://drog.github.io//blog/hello-world</link>
+        <guid isPermaLink="true">http://drog.github.io//blog/hello-world</guid>
+        
         <category>hello world</category>
+        
+        
+        <category>blog</category>
         
       </item>
     

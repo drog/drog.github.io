@@ -10,8 +10,7 @@
 ################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-@import url("prettyPhoto.css") screen;
-@import url("hoverex-all.css") screen;
+
 
 /*	################################################################
 	1. GENERAL STRUCTURES
@@ -25,7 +24,7 @@ body {
 	background: #ffffff;
 	margin: 0;
 	height: 100%;
-	color: #111111;
+	color: #33004D;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	}
@@ -42,7 +41,7 @@ p {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
-	color: #111111;
+	color: #33004D;
 	margin-top: 10px;
 }
 
@@ -52,7 +51,7 @@ img {
 }
 
 a {
-    color:#FF4136;
+    color:#F70031;
     padding: 0;
 	margin: 0;
 	text-decoration: none;
@@ -65,18 +64,18 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color:#FF851B;
+  color:#FF4136;
 }
 
 ::-moz-selection  {
 	color: #fff;
 	text-shadow:none;
-	background:#111111;
+	background:#33004D;
 }
 ::selection {
 	color: #fff;
 	text-shadow:none;
-	background:#111111;
+	background:#33004D;
 }
 
 .centered {
@@ -87,14 +86,15 @@ a:focus {
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
 .navbar {
-	min-height: 30px;
-	padding-top: 10px;
+	min-height: 20px;
+	padding-top: 5px;
 	margin-bottom: 0px;
 }
 
 .navbar-brand {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
+
 }
 
 .navbar-header .navbar-brand {
@@ -108,21 +108,21 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #FF4136;
+	color: #F70031;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #FF4136;
+	color: #F70031;
 	background-color: transparent;
 }
 
 .navbar-default {
-	background-color: #111111;
+	background-color: #33004D;
 	border-color: transparent;
 }
 
 .dropdown-menu {
-	background: #111111;
+	background: #33004D;
 }
 
 .dropdown-menu > li > a {
@@ -133,8 +133,8 @@ a:focus {
 
 .btn-theme {
   color: #fff;
-  background-color: #111111;
-  border-color: #111111;
+  background-color: #33004D;
+  border-color: #33004D;
   margin: 4px;
 }
 .btn-theme:hover,
@@ -143,8 +143,8 @@ a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #FF4136;
-  border-color: #FF4136;
+  background-color: #F70031;
+  border-color: #F70031;
 }
 
 .dmbutton:hover,
@@ -194,7 +194,7 @@ a:focus {
 }
 
 .hline {
-	border-bottom: 2px solid #111111;
+	border-bottom: 2px solid #33004D;
 }
 
 .hline-w {
@@ -206,7 +206,7 @@ a:focus {
 ################################################################# */
 
 #headerwrap {
-	background-color: #FF4136;
+	background-color: #F70031;
 	min-height: 550px;
 	padding-top: 100px;
 	padding-bottom: 0px;
@@ -234,7 +234,7 @@ a:focus {
 }
 
 #service i {
-	color: #FF4136;
+	color: #F70031;
 	font-size: 60px;
 	padding: 15px;
 }
@@ -258,14 +258,14 @@ a:focus {
 {
 	height:100%;
 	width:100%;
-	background-color:#FF4136;
+	background-color:#F70031;
 	background-color:rgba(0,179,254,.9);
 	text-align:center;
 }
 
 /* Testimonials Wrap */
 #twrapback {
-    background-color: #FF4136;
+    background-color: #F70031;
     background-color:rgba(0,179,254,.8);
     position: absolute;
     top: 0;
@@ -324,7 +324,7 @@ a:focus {
 #footerwrap {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background: #111111;
+	background: #33004D;
 }
 
 #footerwrap p {
@@ -342,7 +342,7 @@ a:focus {
 }
 
 #footerwrap i:hover {
-	color: #FF4136
+	color: #F70031
 }
 
 /*	################################################################
@@ -351,7 +351,7 @@ a:focus {
 /* General Tweaks */
 
 .ctitle {
-	color: #FF4136;
+	color: #F70031;
 	font-weight: 700;
 	margin-bottom: 15px;
 }
@@ -367,7 +367,7 @@ csmall {
 }
 
 .badge-theme {
-	background: #FF4136;
+	background: #F70031;
 }
 
 /* Blog Page */
@@ -379,7 +379,6 @@ csmall {
 .popular-posts li {
 	list-style: none;
 	margin-bottom: 20px;
-	min-height: 70px;
 }
 .popular-posts li a,
 .popular-posts li a:hover {

@@ -14,10 +14,10 @@
     <div class="spacing"></div>
     <h4>Categories</h4>
     <div class="hline"></div>
-    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "question" %}
+    {% for categories in site.categories %}{% unless categories.first == "blog" %}
         <p>
-            <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
-            <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+            <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ categories | first }}"><i class="fa fa-angle-right"></i> {{ categories | first | capitalize }}</a>
+            <span class="badge badge-theme pull-right">{{ categories | last | size }}</span>
         </p>
     {% endunless %}{% endfor %}
 
@@ -27,7 +27,7 @@
     <div class="hline"></div>
         <ul class="popular-posts">
             {% for post in site.categories['blog'] limit:4 %}
-                <li>
+            <li>
                     <p><a href="{{ post.url }}">{{ post.title }}</a></p>
                 <em>Posted on {{ post.date | date_to_string }}</em>
             </li>
@@ -39,8 +39,8 @@
     <h4>Popular Tags</h4>
     <div class="hline"></div>
     <p>
-    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "question" %}
-            <a class="btn btn-theme" href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}" role="button">{{ category | first | capitalize }} ({{ category | last | size }})</a>
+    {% for tags in site.tags %}{% unless tags.first == "blog" %}
+            <a class="btn btn-theme" href="{{ '/tags/#'  | prepend: site.baseurl  }}{{ tags | first }}" role="button">{{ tags | first | capitalize }} ({{ tags | last | size }})</a>
         {% endunless %}{% endfor %}
     </p>
 </div>

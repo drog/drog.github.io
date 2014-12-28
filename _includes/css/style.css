@@ -10,8 +10,7 @@
 ################################################################# */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
-@import url("prettyPhoto.css") screen;
-@import url("hoverex-all.css") screen;
+
 
 /*	################################################################
 	1. GENERAL STRUCTURES
@@ -87,14 +86,15 @@ a:focus {
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
 .navbar {
-	min-height: 30px;
-	padding-top: 10px;
+	min-height: 20px;
+	padding-top: 5px;
 	margin-bottom: 0px;
 }
 
 .navbar-brand {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 900;
+
 }
 
 .navbar-header .navbar-brand {
@@ -379,7 +379,6 @@ csmall {
 .popular-posts li {
 	list-style: none;
 	margin-bottom: 20px;
-	min-height: 70px;
 }
 .popular-posts li a,
 .popular-posts li a:hover {
