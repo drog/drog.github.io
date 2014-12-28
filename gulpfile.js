@@ -21,8 +21,13 @@ gulp.task('bootstrap:compileLess', ['bootstrap:prepareLess'], function bootstrap
 gulp.task('bootstrap:compileJs', function bootstrapCompileLess() {
   return gulp.src(['bower_components/bootstrap/js/button.js',
                 'bower_components/bootstrap/js/transition.js',
-                'bower_components/bootstrap/js/collapse.js'])
+                'bower_components/bootstrap/js/collapse.js',
+                'bower_components/bootstrap/js/tooltip.js'])
       .pipe(concat('bootstrap.js'))
+      .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('assets/js/'))
 });
+
+// The default task (called when you run `gulp` from cli)
+gulp.task('default', ['bootstrap:compileLess', 'bootstrap:compileJs']);

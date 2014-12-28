@@ -58,6 +58,17 @@
             <p>Hello everyone, this is my first post here. I decided create my blog in github to practice with git, learn some aspects of ruby with jekyll and for fun.</p>
 
 
+            <div class="clearfix"></div>
+            <hr>
+            <ul class="pager">
+              
+              <li class="previous disabled"><a>&larr; Previous</a></li>
+              
+              
+              <li class="next"><a href="/blog/archlinux/archlinux-config" title="Archlinux config">Next &rarr;</a></li>
+              
+            </ul>
+
             <div class="spacing"></div>
             <!-- Add Disqus comments. -->
 <div id="disqus_thread"></div>
@@ -144,6 +155,8 @@
     </div><! --/row -->
 </div><! --/container -->
 
+            <a id="back-to-top" href="#" class="btn btn-lg back-to-top" role="button"><span class="fa fa-chevron-up"></span></a>
+
         <div id="footerwrap">
     <div class="container">
         <div class="row">
@@ -179,8 +192,32 @@
   ga('create', 'UA-45813922-4', 'auto');
   ga('send', 'pageview');
 
+
 </script>
 
+
+<script>
+$(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        $('#back-to-top').tooltip('show');
+
+});
+</script>
 
     </body>
 </html>
