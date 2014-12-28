@@ -9,7 +9,7 @@ wrap_title: Blog
         <div class="col-lg-9">
             <! -- Blog Post  -->
             <a href="{{ page.url | prepend: site.baseurl }}"><h1 class="ctitle">{{ page.title }}</h1></a>
-            <p><csmall>{{ page.date | date: "%b %-d, %Y" }}. | By: {{ page.author }}</csmall></p>
+            <p><csmall>{{ page.date | date: "%b %-d, %Y" }}</csmall></p>
 
             {{ content }}
 
