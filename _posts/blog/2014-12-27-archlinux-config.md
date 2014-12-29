@@ -23,15 +23,25 @@ You can find all the config files and system configuration files for my Archlinu
 
 ### Table of Contents
 **[Config files](#config-files)**
+
 **[Zsh](#zsh)**
+
 **[Xfce4 Config](#xfce4-config)**
+
 **[nVidia Optimus Bumblebee](#nvidia-optimus-bumblebee)**
+
 **[linux-ck Brain Fuck Scheduler (BFS)](#linux-ck-brain-fuck-scheduler)**
+
 **[Packages for programming](#packages-for-programming)**
+
 **[Sublime Text 3 config](#sublime-text-3-config)**
+
 **[Power managment](#power-managment)**
+
 **[Firewall Configuration](#firewall-configuration)**
+
 **[Better Fonts with [Infinality fonts]](#better-fonts-with-infinality-fonts)**
+
 **[Source of all files](#source-of-all-files)**
 
 <!--more-->
