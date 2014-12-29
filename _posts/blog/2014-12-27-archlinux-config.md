@@ -22,16 +22,26 @@ All steps i reproduced to set my [Archlinux] config.
 You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.
 
 ### Table of Contents
-**[Config files](#Config-files)**
+**[Config files](#Config files)**
+
 **[Zsh](#Zsh)**
-**[Xfce4 Config](#Xfce4-Config)**
-**[nVidia Optimus Bumblebee](#nVidia-Optimus-Bumblebee)**
-**[linux-ck Brain Fuck Scheduler (BFS)](#[linux-ck]-Brain-Fuck-Scheduler)**
-**[Packages for programming](#Packages-for-programming)**
-**[Sublime Text 3 config](#Sublime-Text-3-config)**
-**[Power managment](#Power-managment)**
-**[Firewall Configuration](#Firewall-Configuration)**
-**[Better Fonts with [Infinality fonts]](#Better-Fonts-with-[Infinality-fonts])**
+
+**[Xfce4 Config](#Xfce4 Config)**
+
+**[nVidia Optimus Bumblebee](#nVidia Optimus Bumblebee)**
+
+**[linux-ck Brain Fuck Scheduler (BFS)](#[linux-ck] Brain Fuck Scheduler)**
+
+**[Packages for programming](#Packages for programming)**
+
+**[Sublime Text 3 config](#Sublime Text 3 config)**
+
+**[Power managment](#Power managment)**
+
+**[Firewall Configuration](#Firewall Configuration)**
+
+**[Better Fonts with [Infinality fonts]](#Better Fonts with [Infinality fonts])**
+
 <!--more-->
 
 ## Config files
