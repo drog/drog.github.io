@@ -5,8 +5,8 @@
     <description>blog of programming and linux</description>
     <link>http://drog.github.io//</link>
     <atom:link href="http://drog.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 28 Dec 2014 23:31:10 -0300</pubDate>
-    <lastBuildDate>Sun, 28 Dec 2014 23:31:10 -0300</lastBuildDate>
+    <pubDate>Sun, 28 Dec 2014 23:35:42 -0300</pubDate>
+    <lastBuildDate>Sun, 28 Dec 2014 23:35:42 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,17 +15,27 @@
 You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.&lt;/p&gt;
 
 &lt;h3 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#config-files&quot;&gt;Config files&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#zsh&quot;&gt;Zsh&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#xfce4-config&quot;&gt;Xfce4 Config&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#nvidia-optimus-bumblebee&quot;&gt;nVidia Optimus Bumblebee&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#linux-ck-brain-fuck-scheduler&quot;&gt;linux-ck Brain Fuck Scheduler (BFS)&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#packages-for-programming&quot;&gt;Packages for programming&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#sublime-text-3-config&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#power-managment&quot;&gt;Power managment&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#firewall-configuration&quot;&gt;Firewall Configuration&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#better-fonts-with-infinality-fonts&quot;&gt;Better Fonts with [Infinality fonts]&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;a href=&quot;#source-of-all-files&quot;&gt;Source of all files&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#config-files&quot;&gt;Config files&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#zsh&quot;&gt;Zsh&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#xfce4-config&quot;&gt;Xfce4 Config&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#nvidia-optimus-bumblebee&quot;&gt;nVidia Optimus Bumblebee&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#linux-ck-brain-fuck-scheduler&quot;&gt;linux-ck Brain Fuck Scheduler (BFS)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#packages-for-programming&quot;&gt;Packages for programming&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#sublime-text-3-config&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#power-managment&quot;&gt;Power managment&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#firewall-configuration&quot;&gt;Firewall Configuration&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#better-fonts-with-infinality-fonts&quot;&gt;Better Fonts with [Infinality fonts]&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#source-of-all-files&quot;&gt;Source of all files&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
