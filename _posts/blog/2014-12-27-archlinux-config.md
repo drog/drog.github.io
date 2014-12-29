@@ -16,8 +16,23 @@ tags:
 
 ---
 
+
+
 All steps i reproduced to set my [Archlinux] config.
 You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.
+
+### Table of Contents
+**[Config files](#Config-files)**
+**[Zsh](#Zsh)**
+**[Xfce4 Config](#Xfce4-Config)**
+**[nVidia Optimus Bumblebee](#nVidia-Optimus-Bumblebee)**
+**[linux-ck Brain Fuck Scheduler (BFS)](#[linux-ck]-Brain-Fuck-Scheduler)**
+**[Packages for programming](#Packages-for-programming)**
+**[Sublime Text 3 config](#Sublime-Text-3-config)**
+**[Power managment](#Power-managment)**
+**[Firewall Configuration](#Firewall-Configuration)**
+**[Better Fonts with [Infinality fonts]](#Better-Fonts-with-[Infinality-fonts])**
+<!--more-->
 
 ## Config files
 * [Bumblebee config] to avoid errors
@@ -28,7 +43,7 @@ You can find all the config files and system configuration files for my Archlinu
 * [zsh config] files
 * [Sublime Text 3 config]
 * **and others** config's files
-<!--more-->
+
 
 ## Screenshots
 
@@ -162,7 +177,7 @@ BusID "PCI:01:00:0"
 ```
 [Source Bumblebee config]
 
-## [linux-ck] Brain Fuck Scheduler (BFS)
+## [linux-ck] Brain Fuck Scheduler
 
 ```bash
 pacman-key -r 5EE46C4C
@@ -193,7 +208,7 @@ pacman -S tiled tinyxml sdl sdl_image sdl_gfx sfml
 pacman -S nmap wireshark-cli wireshark-gtk john aircrack-ng
 ```
 
-### Sublime Text 3 config
+## Sublime Text 3 config
 
 #### 1. Install  [Package Control](https://sublime.wbond.net/installation)
 

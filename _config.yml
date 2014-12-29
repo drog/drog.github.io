@@ -25,8 +25,9 @@ colors:  #in hex code if not noted else
   footer_heading: "#F6F6F6"
   footer_content: "#F6F6F6"
 
+author:
+  name: drog
 
-### CONTACT SETTINGS ###
 
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
 social:
