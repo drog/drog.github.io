@@ -22,25 +22,17 @@ All steps i reproduced to set my [Archlinux] config.
 You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.
 
 ### Table of Contents
-**[Config files](#Config files)**
-
-**[Zsh](#Zsh)**
-
-**[Xfce4 Config](#Xfce4 Config)**
-
-**[nVidia Optimus Bumblebee](#nVidia Optimus Bumblebee)**
-
-**[linux-ck Brain Fuck Scheduler (BFS)](#[linux-ck] Brain Fuck Scheduler)**
-
-**[Packages for programming](#Packages for programming)**
-
-**[Sublime Text 3 config](#Sublime Text 3 config)**
-
-**[Power managment](#Power managment)**
-
-**[Firewall Configuration](#Firewall Configuration)**
-
-**[Better Fonts with [Infinality fonts]](#Better Fonts with [Infinality fonts])**
+**[Config files](#config-files)**
+**[Zsh](#zsh)**
+**[Xfce4 Config](#xfce4-config)**
+**[nVidia Optimus Bumblebee](#nvidia-optimus-bumblebee)**
+**[linux-ck Brain Fuck Scheduler (BFS)](#linux-ck-brain-fuck-scheduler)**
+**[Packages for programming](#packages-for-programming)**
+**[Sublime Text 3 config](#sublime-text-3-config)**
+**[Power managment](#power-managment)**
+**[Firewall Configuration](#firewall-configuration)**
+**[Better Fonts with [Infinality fonts]](#better-fonts-with-infinality-fonts)**
+**[Source of all files](#source-of-all-files)**
 
 <!--more-->
 
@@ -346,6 +338,9 @@ pacman -S ibfonts-meta-base ibfonts-meta-extended-lt adobe-source-sans-pro-fonts
 pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts
 ```
 
+## Source of all files
+The config files can be found in [my repo in github]
+
 [Source Xlock config]:https://bbs.archlinux.org/viewtopic.php?id=180985
 [linux-ck]:https://wiki.archlinux.org/index.php/linux-ck
 [Source Bumblebee config]:https://bbs.archlinux.org/viewtopic.php?pid=1326090#p1326090
@@ -360,3 +355,4 @@ pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-so
 [guake config]:https://github.com/drog/config/tree/master/home/diego/.config/gconf/apps/guake
 [zsh config]:https://github.com/drog/config/tree/master/home/diego/.zsh
 [Sublime Text 3 config]:https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+[my repo in github]:https://github.com/drog/config
