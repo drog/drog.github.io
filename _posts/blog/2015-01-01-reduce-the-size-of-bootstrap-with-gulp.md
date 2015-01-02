@@ -15,7 +15,7 @@ tags:
 
 ---
 
-Initially with bootstrap vainilla (without modifications) with font-awesome. This assets uses in total 924k!!
+Initially with bootstrap vanilla (without modifications) with font-awesome. This assets uses in total 924k!!
 After some modifications in the css and javascript got 700kb.
 An 224 kb less corresponding to 24.25% less of size
 
@@ -24,7 +24,8 @@ An 224 kb less corresponding to 24.25% less of size
 ### How?
 
 Remove components unused in my blog of bootstrap.  
-From css
+
+#### From css
 
 * dropdowns
 * forms
@@ -34,7 +35,7 @@ From css
 * carousel
 * and other components
 
-From javascript
+#### From javascript
 
 * affix  4,7K
 * modal 9,2K
@@ -54,7 +55,7 @@ total 136K
 -rw-r--r-- 1 diego users  22K ago 26 14:03 font-awesome.min.css
 ```
 
-Size of fonts of glyphicons (built in default with bootstrap )  
+Size of fonts glyphicons (built in default with bootstrap )  
 
 ``` bash
 ls -lh  
@@ -65,7 +66,7 @@ total 152K
 -rw-r--r-- 1 diego users 23K nov 12 14:03 glyphicons-halflings-regular.woff
 ```
 
-Size of fonts of font-awesome  
+Size of fonts font-awesome  
 
 ``` bash
 ls -lh                                                                 
@@ -103,7 +104,7 @@ Rememember install this with  `npm install --save-dev gulp gulp-less gulp-uglify
 
 #### The magic part
 
-First comile the bootstrap.less with the custom config then compile the less, minify, renamed and copied to assets/css.
+First compile the bootstrap.less with the custom config. Then compile the less, minify, renamed and copied to assets/css.
 
 
 ``` javascript
@@ -118,7 +119,7 @@ gulp.task('bootstrap:compileLess', ['bootstrap:prepareLess'], function bootstrap
 
 You can get the custom boostrap.less  [here](https://github.com/drog/drog.github.io/blob/master/customs/less/bootstrap.less)
 
-Then the javascript part, here just get the components used for you pag and then concat this.
+Then the javascript part, here just get the components used for your web page and then concat this.
 
 ``` javascript
 gulp.task('bootstrap:compileJs', function bootstrapCompileLess() {

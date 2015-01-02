@@ -5,13 +5,13 @@
     <description>blog of programming and linux</description>
     <link>http://drog.github.io//</link>
     <atom:link href="http://drog.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 01 Jan 2015 23:42:15 -0300</pubDate>
-    <lastBuildDate>Thu, 01 Jan 2015 23:42:15 -0300</lastBuildDate>
+    <pubDate>Thu, 01 Jan 2015 23:46:52 -0300</pubDate>
+    <lastBuildDate>Thu, 01 Jan 2015 23:46:52 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Blog: Reduce the size of Bootstrap with Gulp</title>
-        <description>&lt;p&gt;Initially with bootstrap vainilla (without modifications) with font-awesome. This assets uses in total 924k!!
+        <description>&lt;p&gt;Initially with bootstrap vanilla (without modifications) with font-awesome. This assets uses in total 924k!!
 After some modifications in the css and javascript got 700kb.
 An 224 kb less corresponding to 24.25% less of size&lt;/p&gt;
 
@@ -19,8 +19,9 @@ An 224 kb less corresponding to 24.25% less of size&lt;/p&gt;
 
 &lt;h3&gt;How?&lt;/h3&gt;
 
-&lt;p&gt;Remove components unused in my blog of bootstrap.&lt;br&gt;
-From css&lt;/p&gt;
+&lt;p&gt;Remove components unused in my blog of bootstrap.  &lt;/p&gt;
+
+&lt;h4&gt;From css&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;dropdowns&lt;/li&gt;
@@ -32,7 +33,7 @@ From css&lt;/p&gt;
 &lt;li&gt;and other components&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;From javascript&lt;/p&gt;
+&lt;h4&gt;From javascript&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;affix  4,7K&lt;/li&gt;
@@ -51,7 +52,7 @@ total 136K
 -rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 111K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 bootstrap.min.css
 -rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  22K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 14:03 font-awesome.min.css
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Size of fonts of glyphicons (built in default with bootstrap )  &lt;/p&gt;
+&lt;p&gt;Size of fonts glyphicons (built in default with bootstrap )  &lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh  
 total 152K
 -rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 20K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.eot
@@ -59,7 +60,7 @@ total 152K
 -rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 41K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.ttf
 -rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 23K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.woff
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Size of fonts of font-awesome  &lt;/p&gt;
+&lt;p&gt;Size of fonts font-awesome  &lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh                                                                 
 total 600K
 -rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  84K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 12:36 FontAwesome.otf
@@ -87,7 +88,7 @@ total 36
 
 &lt;h4&gt;The magic part&lt;/h4&gt;
 
-&lt;p&gt;First comile the bootstrap.less with the custom config then compile the less, minify, renamed and copied to assets/css.&lt;/p&gt;
+&lt;p&gt;First compile the bootstrap.less with the custom config. Then compile the less, minify, renamed and copied to assets/css.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:compileLess&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:prepareLess&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bootstrapCompileLess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/less/bootstrap.less&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
@@ -98,7 +99,7 @@ total 36
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can get the custom boostrap.less  &lt;a href=&quot;https://github.com/drog/drog.github.io/blob/master/customs/less/bootstrap.less&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Then the javascript part, here just get the components used for you pag and then concat this.&lt;/p&gt;
+&lt;p&gt;Then the javascript part, here just get the components used for your web page and then concat this.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:compileJs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bootstrapCompileLess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/js/button.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                 &lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/js/transition.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
