@@ -5,13 +5,13 @@
     <description>blog of programming and linux</description>
     <link>http://drog.github.io//</link>
     <atom:link href="http://drog.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 01 Jan 2015 23:46:52 -0300</pubDate>
-    <lastBuildDate>Thu, 01 Jan 2015 23:46:52 -0300</lastBuildDate>
+    <pubDate>Thu, 01 Jan 2015 23:52:29 -0300</pubDate>
+    <lastBuildDate>Thu, 01 Jan 2015 23:52:29 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Blog: Reduce the size of Bootstrap with Gulp</title>
-        <description>&lt;p&gt;Initially with bootstrap vanilla (without modifications) with font-awesome. This assets uses in total 924k!!
+        <description>&lt;p&gt;Initially bootstrap vanilla (without modifications) with font-awesome uses in total 924k!!
 After some modifications in the css and javascript got 700kb.
 An 224 kb less corresponding to 24.25% less of size&lt;/p&gt;
 

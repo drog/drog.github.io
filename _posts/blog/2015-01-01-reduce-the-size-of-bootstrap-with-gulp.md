@@ -15,7 +15,7 @@ tags:
 
 ---
 
-Initially with bootstrap vanilla (without modifications) with font-awesome. This assets uses in total 924k!!
+Initially bootstrap vanilla (without modifications) with font-awesome uses in total 924k!!
 After some modifications in the css and javascript got 700kb.
 An 224 kb less corresponding to 24.25% less of size
 
