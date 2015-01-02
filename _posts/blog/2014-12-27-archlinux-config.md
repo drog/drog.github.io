@@ -22,26 +22,16 @@ All steps i reproduced to set my [Archlinux] config.
 You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.
 
 ### Table of Contents
-**[Config files](#config-files)**
-
-**[Zsh](#zsh)**
-
-**[Xfce4 Config](#xfce4-config)**
-
-**[nVidia Optimus Bumblebee](#nvidia-optimus-bumblebee)**
-
-**[linux-ck Brain Fuck Scheduler (BFS)](#linux-ck-brain-fuck-scheduler)**
-
-**[Packages for programming](#packages-for-programming)**
-
-**[Sublime Text 3 config](#sublime-text-3-config)**
-
-**[Power managment](#power-managment)**
-
-**[Firewall Configuration](#firewall-configuration)**
-
-**[Better Fonts with [Infinality fonts]](#better-fonts-with-infinality-fonts)**
-
+**[Config files](#config-files)**  
+**[Zsh](#zsh)**  
+**[Xfce4 Config](#xfce4-config)**  
+**[nVidia Optimus Bumblebee](#nvidia-optimus-bumblebee)**  
+**[linux-ck Brain Fuck Scheduler (BFS)](#linux-ck-brain-fuck-scheduler)**  
+**[Packages for programming](#packages-for-programming)**  
+**[Sublime Text 3 config](#sublime-text-3-config)**  
+**[Power managment](#power-managment)**  
+**[Firewall Configuration](#firewall-configuration)**  
+**[Better Fonts with [Infinality fonts]](#better-fonts-with-infinality-fonts)**  
 **[Source of all files](#source-of-all-files)**
 
 <!--more-->
@@ -235,6 +225,7 @@ import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330
 * [BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
 * [ColorPicker](https://github.com/weslly/ColorPicker)
 * [SublimeCodeIntel](https://github.com/SublimeCodeIntel/SublimeCodeIntel)
+* [Markdown Extended](https://github.com/jonschlinkert/sublime-markdown-extended)
 
 #### 3. Load user settings from [Sublime Text 3 config]
 

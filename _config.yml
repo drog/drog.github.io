@@ -8,10 +8,9 @@ baseurl: "" #important: start with /
 url: "http://drog.github.io/"
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
-kramdown:
-  input: GFM
+
 exclude: ['README.md','bower.json','package.json','bower_components','node_modules','gulpfile.js','customs']
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
@@ -38,3 +37,12 @@ social:
 
 disqus:
     shortname: 'httpdroggithubio'
+
+assets:
+  cachebust: none
+  gzip: true
+  sources:
+    - assets/js
+    - assets/css
+assets:
+  js_compressor:  uglifier 

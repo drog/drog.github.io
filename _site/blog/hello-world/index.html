@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -112,12 +113,22 @@
             <span class="badge badge-theme pull-right">1</span>
         </p>
     
+        <p>
+            <a href="/category/#gulp"><i class="fa fa-angle-right"></i> Gulp</a>
+            <span class="badge badge-theme pull-right">1</span>
+        </p>
+    
 
     <div class="spacing"></div>
 
     <h4>Recent Posts</h4>
     <div class="hline"></div>
         <ul class="popular-posts">
+            
+            <li>
+                    <p><a href="/blog/gulp/reduce-the-size-of-bootstrap-with-gulp">Reduce the size of Bootstrap with Gulp</a></p>
+                <em>Posted on 01 Jan 2015</em>
+            </li>
             
             <li>
                     <p><a href="/blog/archlinux/archlinux-config">Archlinux config</a></p>
@@ -148,6 +159,14 @@
             <a class="btn btn-theme" href="/tags/#config" role="button">Config (1)</a>
         
             <a class="btn btn-theme" href="/tags/#dotfiles" role="button">Dotfiles (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#gulp" role="button">Gulp (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#bower" role="button">Bower (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#bootstrap" role="button">Bootstrap (1)</a>
+        
+            <a class="btn btn-theme" href="/tags/#font awesome" role="button">Font awesome (1)</a>
         
     </p>
 </div>
@@ -182,6 +201,7 @@
 </div><! --/footerwrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/custom.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -196,28 +216,7 @@
 </script>
 
 
-<script>
-$(document).ready(function(){
-     $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
-                $('#back-to-top').fadeIn();
-            } else {
-                $('#back-to-top').fadeOut();
-            }
-        });
-        // scroll body to 0px on click
-        $('#back-to-top').click(function () {
-            $('#back-to-top').tooltip('hide');
-            $('body,html').animate({
-                scrollTop: 0
-            }, 800);
-            return false;
-        });
 
-        $('#back-to-top').tooltip('show');
-
-});
-</script>
 
     </body>
 </html>

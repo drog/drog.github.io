@@ -5,320 +5,1581 @@
     <description>blog of programming and linux</description>
     <link>http://drog.github.io//</link>
     <atom:link href="http://drog.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 28 Dec 2014 23:35:42 -0300</pubDate>
-    <lastBuildDate>Sun, 28 Dec 2014 23:35:42 -0300</lastBuildDate>
+    <pubDate>Thu, 01 Jan 2015 23:42:15 -0300</pubDate>
+    <lastBuildDate>Thu, 01 Jan 2015 23:42:15 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Blog: Archlinux config</title>
-        <description>&lt;p&gt;All steps i reproduced to set my &lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Archlinux&lt;/a&gt; config.&lt;br /&gt;
-You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.&lt;/p&gt;
-
-&lt;h3 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#config-files&quot;&gt;Config files&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#zsh&quot;&gt;Zsh&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#xfce4-config&quot;&gt;Xfce4 Config&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#nvidia-optimus-bumblebee&quot;&gt;nVidia Optimus Bumblebee&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#linux-ck-brain-fuck-scheduler&quot;&gt;linux-ck Brain Fuck Scheduler (BFS)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#packages-for-programming&quot;&gt;Packages for programming&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#sublime-text-3-config&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#power-managment&quot;&gt;Power managment&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#firewall-configuration&quot;&gt;Firewall Configuration&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#better-fonts-with-infinality-fonts&quot;&gt;Better Fonts with [Infinality fonts]&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#source-of-all-files&quot;&gt;Source of all files&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+        <title>Blog: Reduce the size of Bootstrap with Gulp</title>
+        <description>&lt;p&gt;Initially with bootstrap vainilla (without modifications) with font-awesome. This assets uses in total 924k!!
+After some modifications in the css and javascript got 700kb.
+An 224 kb less corresponding to 24.25% less of size&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;config-files&quot;&gt;Config files&lt;/h2&gt;
+&lt;h3&gt;How?&lt;/h3&gt;
+
+&lt;p&gt;Remove components unused in my blog of bootstrap.&lt;br&gt;
+From css&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/etc/bumblebee&quot;&gt;Bumblebee config&lt;/a&gt; to avoid errors&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/etc/lightdm&quot;&gt;lightdm config&lt;/a&gt; with better integration with xfce4&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/blob/master/etc/pulse/daemon.conf&quot;&gt;pulseaudio config&lt;/a&gt; for better audio (?)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/blob/master/home/diego/.conkyrc&quot;&gt;conkyrc config&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/gconf/apps/guake&quot;&gt;guake config&lt;/a&gt; with color shceme from &lt;a href=&quot;https://github.com/tatetian/guake-colors-elementary-os&quot;&gt;guake colors elementary-os&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.zsh&quot;&gt;zsh config&lt;/a&gt; files&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;and others&lt;/strong&gt; config’s files&lt;/li&gt;
+&lt;li&gt;dropdowns&lt;/li&gt;
+&lt;li&gt;forms&lt;/li&gt;
+&lt;li&gt;tables&lt;/li&gt;
+&lt;li&gt;alerts&lt;/li&gt;
+&lt;li&gt;modal&lt;/li&gt;
+&lt;li&gt;carousel&lt;/li&gt;
+&lt;li&gt;and other components&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;screenshots&quot;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;From javascript&lt;/p&gt;
 
-&lt;h4 id=&quot;archlinux-desktop&quot;&gt;Archlinux desktop&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/drog/config/raw/master/screenshots/desktop.png&quot;&gt;&lt;img src=&quot;https://github.com/drog/config/raw/master/screenshots/desktop.png&quot; width=&quot;240px&quot; alt=&quot;Archlinux with xfce4&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;affix  4,7K&lt;/li&gt;
+&lt;li&gt;modal 9,2K&lt;/li&gt;
+&lt;li&gt;carousel 7,0K&lt;/li&gt;
+&lt;li&gt;and other components&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;guake-colors&quot;&gt;Guake colors&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/drog/config/raw/master/screenshots/guake.png&quot;&gt;&lt;img src=&quot;https://github.com/drog/config/raw/master/screenshots/guake.png&quot; width=&quot;240px&quot; alt=&quot;Guake colors&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And the more important, remove glyphicons for use font-awesome.&lt;/p&gt;
 
-&lt;h2 id=&quot;zsh&quot;&gt;Zsh&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S zsh zsh-completions
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-sudo wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-chsh -s /bin/zsh
-sudo chsh -s /bin/zsh
+&lt;h3&gt;Before&lt;/h3&gt;
+
+&lt;p&gt;Size of css&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh
+total 136K
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 111K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 bootstrap.min.css
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  22K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 14:03 font-awesome.min.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Size of fonts of glyphicons (built in default with bootstrap )  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh  
+total 152K
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 20K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.eot
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 62K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.svg
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 41K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.ttf
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 23K nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 glyphicons-halflings-regular.woff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Size of fonts of font-awesome  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh                                                                 
+total 600K
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  84K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 12:36 FontAwesome.otf
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  55K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 12:36 fontawesome-webfont.eot
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 281K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 12:36 fontawesome-webfont.svg
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 110K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 12:36 fontawesome-webfont.ttf
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  64K ago &lt;span class=&quot;m&quot;&gt;26&lt;/span&gt; 12:36 fontawesome-webfont.woff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Size of bootstrap javascript &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -l
+total 36
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users &lt;span class=&quot;m&quot;&gt;35601&lt;/span&gt; nov &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt; 14:03 bootstrap.min.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Gulp Code&lt;/h3&gt;
+
+&lt;h4&gt;First add the dependencies&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-less&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uglify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-uglify&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minifyCSS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-minify-css&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-rename&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-concat&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Rememember install this with  &lt;code&gt;npm install --save-dev gulp gulp-less gulp-uglify gulp-minify-css gulp-rename gulp-concat&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4&gt;The magic part&lt;/h4&gt;
+
+&lt;p&gt;First comile the bootstrap.less with the custom config then compile the less, minify, renamed and copied to assets/css.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:compileLess&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:prepareLess&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bootstrapCompileLess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/less/bootstrap.less&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;minifyCSS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;suffix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;.min&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;assets/css/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can get the custom boostrap.less  &lt;a href=&quot;https://github.com/drog/drog.github.io/blob/master/customs/less/bootstrap.less&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then the javascript part, here just get the components used for you pag and then concat this.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:compileJs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bootstrapCompileLess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/js/button.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/js/transition.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/js/collapse.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s1&quot;&gt;&amp;#39;bower_components/bootstrap/js/tooltip.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uglify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;suffix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;.min&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;assets/js/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And finally here is the default task, when you put &lt;code&gt;gulp&lt;/code&gt; in the terminal this will execute the two task.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// The default task (called when you run `gulp` from cli)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:compileLess&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;bootstrap:compileJs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can get the gulpfile.js &lt;a href=&quot;https://github.com/drog/drog.github.io/blob/master/gulpfile.js&quot;&gt;here&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3&gt;After customizations&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh 
+total 86K
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  86K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 bootstrap.min.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh
+total 14K
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 14K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 bootstrap.min.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ls -lh
+total 600K
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  84K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 FontAwesome.otf
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  55K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 fontawesome-webfont.eot
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 281K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 fontawesome-webfont.svg
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users 110K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 fontawesome-webfont.ttf
+-rw-r--r-- &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; diego users  64K ene  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 15:05 fontawesome-webfont.woff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Well, all this effort for 224kb less?&lt;/h3&gt;
+
+&lt;p&gt;Maybe the difference of 224kb is irrelevant... or maybe not.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;47% of consumers expect a web page to load in 2 seconds or less.&lt;/li&gt;
+&lt;li&gt;40% of people abandon a website that takes more than 3 seconds to load.&lt;/li&gt;
+&lt;li&gt;A 1 second delay in page response can result in a 7% reduction in conversions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In conclusion all efforts are good to improve the size of page and reduce the time of load of your page, maybe this 224kb denote the difference in the 40% of people abandon a website that takes more than 3 seconds to load or not.&lt;/p&gt;
+
+&lt;h3&gt;Sources&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.kissmetrics.com/speed-is-a-killer/&quot;&gt;Speed Is A Killer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@wizardzloy/customizing-bootstrap-with-gulp-js-and-bower-fafac8e3e1af&quot;&gt;customizing-bootstrap-with-gulp-js-and-bower&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 01 Jan 2015 20:42:34 -0300</pubDate>
+        <link>http://drog.github.io//blog/gulp/reduce-the-size-of-bootstrap-with-gulp</link>
+        <guid isPermaLink="true">http://drog.github.io//blog/gulp/reduce-the-size-of-bootstrap-with-gulp</guid>
+        
+        <category>gulp</category>
+        
+        <category>bower</category>
+        
+        <category>bootstrap</category>
+        
+        <category>font awesome</category>
+        
+        
+        <category>blog</category>
+        
+        <category>gulp</category>
+        
+      </item>
+    
+      <item>
+        <title>: Reduce The Size Of Bootstrap With Gulp</title>
+        <description>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;style&gt;body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format(&#39;woff&#39;);
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format(&#39;woff&#39;);
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Segoe UI&quot;, Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type=&quot;checkbox&quot;] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: &quot; &quot;;
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body&gt;*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body&gt;*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li&gt;p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote&gt;:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote&gt;:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: &quot;\00a0&quot;;
+}
+
+.markdown-body pre&gt;code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition&gt;.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention&gt;.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution&gt;.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint&gt;.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger&gt;.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question&gt;.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note&gt;.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: &quot;\f056\00a0&quot;;
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: &quot;\f058\00a0&quot;;
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: &quot;\f06a\00a0&quot;;
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: &quot;\f05a\00a0&quot;;
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: &quot;\f057\00a0&quot;;
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: &quot;\f059\00a0&quot;;
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: &quot;\f040\00a0&quot;;
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition&gt;*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition&gt;*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: &#39;\f05c&#39;;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: &quot; (&quot; attr(href) &quot;)&quot;;
+  }
+
+  .markdown-body abbr[title]:after {
+    content: &quot; (&quot; attr(title) &quot;)&quot;;
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^=&quot;javascript:&quot;]:after,
+  .markdown-body a[href^=&quot;#&quot;]:after {
+    content: &quot;&quot;;
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+&lt;/style&gt;&lt;title&gt;2014-12-29-reduce-the-size-of-bootstrap-with-gulp&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;article class=&quot;markdown-body&quot;&gt;&lt;hr /&gt;
+&lt;p&gt;layout: post          #important: don&amp;rsquo;t change this&lt;br /&gt;
+title: &amp;ldquo;Reduce the size of Bootstrap with Gulp&amp;rdquo;&lt;br /&gt;
+date: 2014-12-29 22:27:34&lt;br /&gt;
+author: drog&lt;br /&gt;
+categories:&lt;br /&gt;
+- blog                #important: leave this here&lt;/p&gt;
+&lt;p&gt;tags:&lt;br /&gt;
+- gulp&lt;br /&gt;
+- bower&lt;br /&gt;
+- bootstrap&lt;br /&gt;
+- font awesome&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Initially with bootstrap vainilla (without modifications) with font-awesome. This assets uses in total 924k!!&lt;br /&gt;
+After some modifications in the css and javascript got 700kb.&lt;br /&gt;
+An 224 kb less corresponding to 24.25% less of size&lt;/p&gt;
+&lt;h3 id=&quot;how&quot;&gt;&lt;a name=&quot;user-content-how&quot; href=&quot;#how&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;How?&lt;/h3&gt;
+&lt;p&gt;Remove components unused in my blog of bootstrap.&lt;br /&gt;
+From css&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dropdowns&lt;/li&gt;
+&lt;li&gt;forms&lt;/li&gt;
+&lt;li&gt;tables&lt;/li&gt;
+&lt;li&gt;alerts&lt;/li&gt;
+&lt;li&gt;modal&lt;/li&gt;
+&lt;li&gt;carousel&lt;/li&gt;
+&lt;li&gt;and other components&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From javascript&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;affix  4,7K&lt;/li&gt;
+&lt;li&gt;modal 9,2K&lt;/li&gt;
+&lt;li&gt;carousel 7,0K&lt;/li&gt;
+&lt;li&gt;and other components&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And the more important, remove glyphicons for use font-awesome.&lt;/p&gt;
+&lt;h3 id=&quot;before&quot;&gt;&lt;a name=&quot;user-content-before&quot; href=&quot;#before&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;Before&lt;/h3&gt;
+&lt;p&gt;Size of css&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -lh
+total 136K
+-rw-r--r-- 1 diego users 111K nov 12 14:03 bootstrap.min.css
+-rw-r--r-- 1 diego users  22K ago 26 14:03 font-awesome.min.css
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;xfce4-config&quot;&gt;Xfce4 Config&lt;/h2&gt;
+&lt;p&gt;Size of fonts of glyphicons (built in default with bootstrap )  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -lh  
+total 152K
+-rw-r--r-- 1 diego users 20K nov 12 14:03 glyphicons-halflings-regular.eot
+-rw-r--r-- 1 diego users 62K nov 12 14:03 glyphicons-halflings-regular.svg
+-rw-r--r-- 1 diego users 41K nov 12 14:03 glyphicons-halflings-regular.ttf
+-rw-r--r-- 1 diego users 23K nov 12 14:03 glyphicons-halflings-regular.woff
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;xfce4-extras&quot;&gt;1. xfce4 extras&lt;/h3&gt;
+&lt;p&gt;Size of fonts of font-awesome  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -lh                                                                 
+total 600K
+-rw-r--r-- 1 diego users  84K ago 26 12:36 FontAwesome.otf
+-rw-r--r-- 1 diego users  55K ago 26 12:36 fontawesome-webfont.eot
+-rw-r--r-- 1 diego users 281K ago 26 12:36 fontawesome-webfont.svg
+-rw-r--r-- 1 diego users 110K ago 26 12:36 fontawesome-webfont.ttf
+-rw-r--r-- 1 diego users  64K ago 26 12:36 fontawesome-webfont.woff
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#xfce4 devel
+&lt;p&gt;Size of bootstrap javascript &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -l
+total 36
+-rw-r--r-- 1 diego users 35601 nov 12 14:03 bootstrap.min.js
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;gulp-code&quot;&gt;&lt;a name=&quot;user-content-gulp-code&quot; href=&quot;#gulp-code&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;Gulp Code&lt;/h3&gt;
+&lt;h4 id=&quot;first-add-the-dependencies&quot;&gt;&lt;a name=&quot;user-content-first-add-the-dependencies&quot; href=&quot;#first-add-the-dependencies&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;First add the dependencies&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;var gulp = require(&#39;gulp&#39;);
+var less = require(&#39;gulp-less&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var minifyCSS = require(&#39;gulp-minify-css&#39;);
+var rename = require(&#39;gulp-rename&#39;);
+var concat = require(&#39;gulp-concat&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rememember install this with  &lt;code&gt;npm install --save-dev gulp gulp-less gulp-uglify gulp-minify-css gulp-rename gulp-concat&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;the-magic-part&quot;&gt;&lt;a name=&quot;user-content-the-magic-part&quot; href=&quot;#the-magic-part&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;The magic part&lt;/h4&gt;
+&lt;p&gt;First comile the bootstrap.less with the custom config then compile the less, minify, renamed and copied to assets/css.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;gulp.task(&#39;bootstrap:compileLess&#39;, [&#39;bootstrap:prepareLess&#39;], function bootstrapCompileLess() {
+  return gulp.src(&#39;bower_components/bootstrap/less/bootstrap.less&#39;)
+      .pipe(less())
+      .pipe(minifyCSS())
+      .pipe(rename({suffix: &#39;.min&#39;}))
+      .pipe(gulp.dest(&#39;assets/css/&#39;));
+});
+
+You can get the custom boostrap.less  [here](https://github.com/drog/drog.github.io/blob/master/customs/less/bootstrap.less)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;gulp.task(&#39;bootstrap:compileJs&#39;, function bootstrapCompileLess() {
+  return gulp.src([&#39;bower_components/bootstrap/js/button.js&#39;,
+                &#39;bower_components/bootstrap/js/transition.js&#39;,
+                &#39;bower_components/bootstrap/js/collapse.js&#39;,
+                &#39;bower_components/bootstrap/js/tooltip.js&#39;])
+      .pipe(concat(&#39;bootstrap.js&#39;))
+      .pipe(uglify())
+      .pipe(rename({suffix: &#39;.min&#39;}))
+      .pipe(gulp.dest(&#39;assets/js/&#39;))
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;custom-bootstrapless&quot;&gt;&lt;a name=&quot;user-content-custom-bootstrapless&quot; href=&quot;#custom-bootstrapless&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;Custom bootstrap.less&lt;/h3&gt;
+&lt;h3 id=&quot;after&quot;&gt;&lt;a name=&quot;user-content-after&quot; href=&quot;#after&quot; class=&quot;headeranchor-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;headeranchor&quot;&gt;&lt;/span&gt;&lt;/a&gt;After&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -lh 
+total 86K
+-rw-r--r-- 1 diego users  86K ene  1 15:05 bootstrap.min.css
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -lh
+total 14K
+-rw-r--r-- 1 diego users 14K ene  1 15:05 bootstrap.min.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ls -lh
+total 600K
+-rw-r--r-- 1 diego users  84K ene  1 15:05 FontAwesome.otf
+-rw-r--r-- 1 diego users  55K ene  1 15:05 fontawesome-webfont.eot
+-rw-r--r-- 1 diego users 281K ene  1 15:05 fontawesome-webfont.svg
+-rw-r--r-- 1 diego users 110K ene  1 15:05 fontawesome-webfont.ttf
+-rw-r--r-- 1 diego users  64K ene  1 15:05 fontawesome-webfont.woff
+&lt;/code&gt;&lt;/pre&gt;&lt;/article&gt;&lt;/body&gt;&lt;/html&gt;</description>
+        <pubDate>Mon, 29 Dec 2014 00:00:00 -0300</pubDate>
+        <link>http://drog.github.io//reduce-the-size-of-bootstrap-with-gulp</link>
+        <guid isPermaLink="true">http://drog.github.io//reduce-the-size-of-bootstrap-with-gulp</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Blog: Archlinux config</title>
+        <description>&lt;p&gt;All steps i reproduced to set my &lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Archlinux&lt;/a&gt; config.
+You can find all the config files and system configuration files for my Archlinux  to set up a nice environment for development and daily use.&lt;/p&gt;
+
+&lt;h3&gt;Table of Contents&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;#config-files&quot;&gt;Config files&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#zsh&quot;&gt;Zsh&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#xfce4-config&quot;&gt;Xfce4 Config&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#nvidia-optimus-bumblebee&quot;&gt;nVidia Optimus Bumblebee&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#linux-ck-brain-fuck-scheduler&quot;&gt;linux-ck Brain Fuck Scheduler (BFS)&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#packages-for-programming&quot;&gt;Packages for programming&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#sublime-text-3-config&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#power-managment&quot;&gt;Power managment&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#firewall-configuration&quot;&gt;Firewall Configuration&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#better-fonts-with-infinality-fonts&quot;&gt;Better Fonts with &lt;a href=&quot;https://wiki.archlinux.org/index.php/Infinality&quot;&gt;Infinality fonts&lt;/a&gt;&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;a href=&quot;#source-of-all-files&quot;&gt;Source of all files&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2&gt;Config files&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/etc/bumblebee&quot;&gt;Bumblebee config&lt;/a&gt; to avoid errors&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/etc/lightdm&quot;&gt;lightdm config&lt;/a&gt; with better integration with xfce4&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/blob/master/etc/pulse/daemon.conf&quot;&gt;pulseaudio config&lt;/a&gt; for better audio (?)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/blob/master/home/diego/.conkyrc&quot;&gt;conkyrc config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/gconf/apps/guake&quot;&gt;guake config&lt;/a&gt; with color shceme from &lt;a href=&quot;https://github.com/tatetian/guake-colors-elementary-os&quot;&gt;guake colors elementary-os&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.zsh&quot;&gt;zsh config&lt;/a&gt; files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;and others&lt;/strong&gt; config&amp;#39;s files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Screenshots&lt;/h2&gt;
+
+&lt;h4&gt;Archlinux desktop&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/drog/config/raw/master/screenshots/desktop.png&quot;&gt;&lt;img src=&quot;https://github.com/drog/config/raw/master/screenshots/desktop.png&quot; width=&quot;240px&quot; alt=&quot;Archlinux with xfce4&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Guake colors&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/drog/config/raw/master/screenshots/guake.png&quot;&gt;&lt;img src=&quot;https://github.com/drog/config/raw/master/screenshots/guake.png&quot; width=&quot;240px&quot; alt=&quot;Guake colors&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Zsh&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S zsh zsh-completions
+wget --no-check-certificate http://install.ohmyz.sh -O - &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sh
+sudo wget --no-check-certificate http://install.ohmyz.sh -O - &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sh
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Xfce4 Config&lt;/h2&gt;
+
+&lt;h3&gt;1. xfce4 extras&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#xfce4 devel&lt;/span&gt;
 yaourt -S libxfce4ui-devel xfwm4-devel xfdesktop-devel xfce4-settings-devel xfce4-session-devel
 
 pacman -S lxtask ffmpegthumbnailer poppler-glib gvfs gvfs-smb sshfs xdg-user-dirs xdg-user-dirs-gtk guake pavucontrol pulseaudio-alsa lib32-alsa-plugins lib32-libpulse
 yaourt -S xfce4-volumed-pulse xfce4-whiskermenu-plugin menulibre
 xdg-user-dirs-update
 xdg-user-dirs-gtk-update
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;xfce4-eyecandy&quot;&gt;2. xfce4 eyecandy&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;yaourt -S xfce-theme-greybird xcursor-human elementary-xfce-icons-git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;cursor-theme&quot;&gt;2.1 Cursor theme&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2. xfce4 eyecandy&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yaourt -S xfce-theme-greybird xcursor-human elementary-xfce-icons-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;2.1 Cursor theme&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;nano /usr/share/icons/default/index.theme&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[Icon Theme]
-Inherits=Human
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;xfce4-lightdm-integration&quot;&gt;3. xfce4 Lightdm integration&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S lightdm-gtk2-greeter light-locker
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Icon Theme&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;Inherits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Human
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3. xfce4 Lightdm integration&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S lightdm-gtk2-greeter light-locker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;nano /etc/lightdm/lightdm.conf&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[SeatDefaults]
-greeter-session=lightdm-gtk-greeter
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;wallpaper-lightdm&quot;&gt;3.1 Wallpaper lightdm&lt;/h4&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;SeatDefaults&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+greeter-session&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lightdm-gtk-greeter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;3.1 Wallpaper lightdm&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;cp path/to/wallpaper.png /usr/share/pixmaps/wallpaper.png&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;lightdm-gtk-greeter&quot;&gt;3.2 lightdm-gtk-greeter&lt;/h4&gt;
+&lt;h4&gt;3.2 lightdm-gtk-greeter&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;nano /etc/lightdm/lightdm-gtk-greeter.conf&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;greeter&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /usr/share/pixmaps/wallpaper.png
+theme-name&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Greybird
+icon-theme-name&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;elementary-xfce
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;4. xfce4 Lightdm lightlock&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[greeter]
-background= /usr/share/pixmaps/wallpaper.png
-theme-name=Greybird
-icon-theme-name=elementary-xfce
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;xfce4-lightdm-lightlock&quot;&gt;4. xfce4 Lightdm lightlock&lt;/h3&gt;
-
-&lt;h4 id=&quot;create-systemd-service&quot;&gt;4.1  Create systemd service&lt;/h4&gt;
+&lt;h4&gt;4.1  Create systemd service&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;nano /etc/systemd/system/lock.service&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Unit&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Lock X session
+&lt;span class=&quot;nv&quot;&gt;Before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;suspend.target
 
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[Unit]
-Description=Lock X session
-Before=suspend.target
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Service&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneshot
+&lt;span class=&quot;nv&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/bin/xflock4
 
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/xflock4
-
-[Install]
-WantedBy=suspend.target
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;enable-systemd-service&quot;&gt;4.2  Enable systemd service&lt;/h4&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Install&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;suspend.target
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;4.2  Enable systemd service&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;systemctl enable lock&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;add-light-locker-to-xflock4-script&quot;&gt;4.3 Add light-locker to xflock4 script&lt;/h4&gt;
+&lt;h4&gt;4.3 Add light-locker to xflock4 script&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;nano /usr/bin/xflock4&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#!/bin/sh
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
 light-locker-command -l
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?id=180985&quot;&gt;Source Xlock config&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;nvidia-optimus-bumblebee&quot;&gt;nVidia Optimus Bumblebee&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S bumblebee bbswitch primus lib32-primus lib32-virtualgl nvidia lib32-nvidia-utils
+&lt;h2&gt;nVidia Optimus Bumblebee&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S bumblebee bbswitch primus lib32-primus lib32-virtualgl nvidia lib32-nvidia-utils
 gpasswd -a diego bumblebee
-systemctl enable bumblebeed
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;nano /etc/mkinitcpio.conf &lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;MODULES=&quot;i915 bbswitch&quot;
-&lt;/code&gt;&lt;/pre&gt;
+systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;bumblebeed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;nano /etc/mkinitcpio.conf&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MODULES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;i915 bbswitch&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;nano /etc/default/grub&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet rcutree.rcu_idle_gp_delay=1&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;quiet rcutree.rcu_idle_gp_delay=1&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;lspci | grep VGA | grep NVIDIA&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;nano /etc/bumblebee/xorg.conf.nvidia&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;BusID &quot;PCI:01:00:0&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;BusID &lt;span class=&quot;s2&quot;&gt;&amp;quot;PCI:01:00:0&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?pid=1326090#p1326090&quot;&gt;Source Bumblebee config&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;linux-ck-brain-fuck-scheduler&quot;&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/linux-ck&quot;&gt;linux-ck&lt;/a&gt; Brain Fuck Scheduler&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman-key -r 5EE46C4C
+&lt;h2&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/linux-ck&quot;&gt;linux-ck&lt;/a&gt; Brain Fuck Scheduler&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman-key -r 5EE46C4C
 pacman-key --lsign-key 5EE46C4C
 pacman -S linux-ck-ivybridge linux-ck-ivybridge-headers nvidia-ck-ivybridge
 yaourt -S bbswitch-ck acpi_call-ck
 grub-mkconfig -o /boot/grub/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;packages-for-programming&quot;&gt;Packages for programming&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S mariadb mongodb ruby openssh nodejs apache php php-apache php-mcrypt php-gd php-composer gdb virtualbox jdk7-openjdk jre7-openjdk jre7-openjdk-headlessc clang qtcreator
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Packages for programming&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S mariadb mongodb ruby openssh nodejs apache php php-apache php-mcrypt php-gd php-composer gdb virtualbox jdk7-openjdk jre7-openjdk jre7-openjdk-headlessc clang qtcreator
 
 pacman -S postgresql php-pgsql pgadmin3
 
 pacman -S xampp
-sudo ln -s ~/public_html /opt/lampp/htdocs/$USER
+sudo ln -s ~/public_html /opt/lampp/htdocs/&lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;
 
 yaourt -S sublime-text-dev virtualbox-ext-oracle
 
 npm install -g bower gulp grunt-cli yo sails generator-gulp-angular  generator-angular
 
-#games
+&lt;span class=&quot;c&quot;&gt;#games&lt;/span&gt;
 pacman -S tiled tinyxml sdl sdl_image sdl_gfx sfml
 
-#Networking
+&lt;span class=&quot;c&quot;&gt;#Networking&lt;/span&gt;
 pacman -S nmap wireshark-cli wireshark-gtk john aircrack-ng
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Sublime Text 3 config&lt;/h2&gt;
 
-&lt;h2 id=&quot;sublime-text-3-config&quot;&gt;Sublime Text 3 config&lt;/h2&gt;
-
-&lt;h4 id=&quot;install--package-controlhttpssublimewbondnetinstallation&quot;&gt;1. Install  &lt;a href=&quot;https://sublime.wbond.net/installation&quot;&gt;Package Control&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;1. Install  &lt;a href=&quot;https://sublime.wbond.net/installation&quot;&gt;Package Control&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Open Sublime Text 3 and hit &lt;code&gt;ctrl+´&lt;/code&gt; shortcut or the &lt;code&gt;View &amp;gt; Show Console&lt;/code&gt; menu, then enter the following:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;import urllib.request,os,hashlib&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;7183a2d3e96f11eeadd761d777e62404&amp;#39;&lt;/span&gt; + &lt;span class=&quot;s1&quot;&gt;&amp;#39;e330c659d4bb41d3bdf022e94cab3cd0&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Package Control.sublime-package&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ipp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sublime.installed_packages_path&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; urllib.request.install_opener&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; urllib.request.build_opener&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; urllib.request.ProxyHandler&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; urllib.request.urlopen&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://packagecontrol.io/&amp;#39;&lt;/span&gt; + pf.replace&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;%20&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;.read&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dh&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; hashlib.sha256&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;by&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.hexdigest&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Error validating download (got %s instead of %s), please try manual install&amp;#39;&lt;/span&gt; % &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;dh, h&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; dh !&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; h &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; open&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;os.path.join&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; ipp, pf&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;wb&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.write&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;by&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;2.Install and load packages (&lt;code&gt;ctrl-Shift-P&lt;/code&gt;)&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;import urllib.request,os,hashlib; h = &#39;7183a2d3e96f11eeadd761d777e62404&#39; + &#39;e330c659d4bb41d3bdf022e94cab3cd0&#39;; pf = &#39;Package Control.sublime-package&#39;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &#39;http://packagecontrol.io/&#39; + pf.replace(&#39; &#39;, &#39;%20&#39;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&#39;Error validating download (got %s instead of %s), please try manual install&#39; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &#39;wb&#39; ).write(by)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;install-and-load-packages-ctrl-shift-p&quot;&gt;2.Install and load packages (&lt;code&gt;ctrl-Shift-P&lt;/code&gt;)&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/facelessuser/BracketHighlighter&quot;&gt;BracketHighlighter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/weslly/ColorPicker&quot;&gt;ColorPicker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeCodeIntel/SublimeCodeIntel&quot;&gt;SublimeCodeIntel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facelessuser/BracketHighlighter&quot;&gt;BracketHighlighter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/weslly/ColorPicker&quot;&gt;ColorPicker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/SublimeCodeIntel/SublimeCodeIntel&quot;&gt;SublimeCodeIntel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jonschlinkert/sublime-markdown-extended&quot;&gt;Markdown Extended&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;load-user-settings-from-sublime-text-3-config&quot;&gt;3. Load user settings from &lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;3. Load user settings from &lt;a href=&quot;https://github.com/drog/config/tree/master/home/diego/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&quot;&gt;Sublime Text 3 config&lt;/a&gt;&lt;/h4&gt;
 
-&lt;h3 id=&quot;postgresql-config&quot;&gt;PostgreSQL config&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sed -i &#39;/pgsql.so/s/^;//&#39; /etc/php/php.ini
-su - postgres -c &quot;initdb --locale es_CL.UTF-8 -D &#39;/var/lib/postgres/data&#39;&quot;
+&lt;h3&gt;PostgreSQL config&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sed -i &lt;span class=&quot;s1&quot;&gt;&amp;#39;/pgsql.so/s/^;//&amp;#39;&lt;/span&gt; /etc/php/php.ini
+su - postgres -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;initdb --locale es_CL.UTF-8 -D &amp;#39;/var/lib/postgres/data&amp;#39;&amp;quot;&lt;/span&gt;
 chown -R postgres:postgres /var/lib/postgres
 systemctl start postgresql
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Mariadb config&lt;/h3&gt;
 
-&lt;h3 id=&quot;mariadb-config&quot;&gt;Mariadb config&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;systemctl start mysqld &amp;amp;&amp;amp;  /usr/bin/mysql_secure_installation&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;power-managment&quot;&gt;Power managment&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S  tlp lm_sensors smartmontools lsb-release ethtool iw
-systemctl enable tlp
+&lt;h2&gt;Power managment&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S  tlp lm_sensors smartmontools lsb-release ethtool iw
+systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;tlp
 sensors-detect
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;network-manager&quot;&gt;Network Manager&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S networkmanager networkmanager-openconnect network-manager-applet dnsmasq
-systemctl enable NetworkManager
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;bluetooth&quot;&gt;Bluetooth&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;yaourt -S blueman-git
-systemctl enable bluetooth
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;firewall-configuration&quot;&gt;Firewall Configuration&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S iptables
-systemctl enable iptables &amp;amp;&amp;amp; systemctl start iptables
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Network Manager&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S networkmanager networkmanager-openconnect network-manager-applet dnsmasq
+systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;NetworkManager
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Bluetooth&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yaourt -S blueman-git
+systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;bluetooth
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Firewall Configuration&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S iptables
+systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;iptables &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; systemctl start iptables
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Set rules&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;#block all conections
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#block all conections&lt;/span&gt;
 iptables -P INPUT DROP
-#allow all conections for localhost
+&lt;span class=&quot;c&quot;&gt;#allow all conections for localhost&lt;/span&gt;
 iptables -A INPUT -i lo -j ACCEPT
-#allow all conections established by localhost
+&lt;span class=&quot;c&quot;&gt;#allow all conections established by localhost&lt;/span&gt;
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Save rules&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;iptables-save &amp;gt; /etc/iptables/iptables.rules
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;iptables-save &amp;gt; /etc/iptables/iptables.rules
 systemctl reload iptables
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;other-stuff&quot;&gt;Other stuff&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S conky clementine gpicview wine winetricks wine_gecko xdelta3 pkgstats firefox-adblock-plus  firefox-i18n-es-cl transmission-gtk filezilla xchat  wget mpv libva libva-intel-driver thunderbird-i18n-es-ar  gtk-recordmydesktop skype galculator bleachbit preload ntfs-3g archey3 chromium flashplugin
-#fix errors logs wine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Other stuff&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S conky clementine gpicview wine winetricks wine_gecko xdelta3 pkgstats firefox-adblock-plus  firefox-i18n-es-cl transmission-gtk filezilla xchat  wget mpv libva libva-intel-driver thunderbird-i18n-es-ar  gtk-recordmydesktop skype galculator bleachbit preload ntfs-3g archey3 chromium flashplugin
+&lt;span class=&quot;c&quot;&gt;#fix errors logs wine&lt;/span&gt;
 pacman -S lib32-ncurses lib32-mpg123
 yaourt -S profile-sync-daemon anything-sync-daemon chromium-pepper-flash
-#gaming
+&lt;span class=&quot;c&quot;&gt;#gaming&lt;/span&gt;
 pacman -S steam desmume
 
-#Multimedia extras
+&lt;span class=&quot;c&quot;&gt;#Multimedia extras&lt;/span&gt;
 pacman -S  gimp gimp-plugin-gmic inkscape blender mkvtoolnix-gtk soundconverter
 yaourt -S jdownloader2 teamspeak3 animecheck-git radiotray
-#Ofimatic
+&lt;span class=&quot;c&quot;&gt;#Ofimatic&lt;/span&gt;
 pacman -S libreoffice-fresh-es hunspell-es hyphen-es libmythes mythes-es
 
-#LaTeX
+&lt;span class=&quot;c&quot;&gt;#LaTeX&lt;/span&gt;
 pacman -S texlive-core texlive-bibtexextra texlive-htmlxml texlive-humanities texlive-latexextra texlive-pictures texlive-publishers  texlive-science
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;compressed-files&quot;&gt;Compressed Files&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S file-roller
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Compressed Files&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S file-roller
 pacman -S unrar zip unzip xz tar gzip bzip2 rpmextract
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;better-fonts-with-infinality-fonts&quot;&gt;Better Fonts with &lt;a href=&quot;https://wiki.archlinux.org/index.php/Infinality&quot;&gt;Infinality fonts&lt;/a&gt;&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Better Fonts with &lt;a href=&quot;https://wiki.archlinux.org/index.php/Infinality&quot;&gt;Infinality fonts&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;nano /etc/pacman.con&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;infinality-bundle&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; http://bohoomil.com/repo/&lt;span class=&quot;nv&quot;&gt;$arch&lt;/span&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;[infinality-bundle]
-Server = http://bohoomil.com/repo/$arch
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;infinality-bundle-multilib&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; http://bohoomil.com/repo/multilib/&lt;span class=&quot;nv&quot;&gt;$arch&lt;/span&gt;
 
-[infinality-bundle-multilib]
-Server = http://bohoomil.com/repo/multilib/$arch
-
-[infinality-bundle-fonts]
-Server = http://bohoomil.com/repo/fonts
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S infinality-bundle infinality-bundle-multilib
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;infinality-bundle-fonts&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; http://bohoomil.com/repo/fonts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pacman -S infinality-bundle infinality-bundle-multilib
 
 pacman -S ibfonts-meta-base ibfonts-meta-extended-lt adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-meslo-fonts-ibx
 
-#Oriental fonts
+&lt;span class=&quot;c&quot;&gt;#Oriental fonts&lt;/span&gt;
 pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Source of all files&lt;/h2&gt;
 
-&lt;h2 id=&quot;source-of-all-files&quot;&gt;Source of all files&lt;/h2&gt;
 &lt;p&gt;The config files can be found in &lt;a href=&quot;https://github.com/drog/config&quot;&gt;my repo in github&lt;/a&gt;&lt;/p&gt;
-
 </description>
         <pubDate>Sat, 27 Dec 2014 19:45:52 -0300</pubDate>
         <link>http://drog.github.io//blog/archlinux/archlinux-config</link>
