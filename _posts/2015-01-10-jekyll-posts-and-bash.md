@@ -13,7 +13,7 @@ Finding a way to automate the process of creation post, i found some interesting
 Now the process is more simple and easier.
 Just type in the terminal
 
-![My helpful screenshot]({{ site.url }}/img/jekyll-bash-test.png)
+![Script in action]({{ site.baseurl }}public/img/jekyll-bash-test.png)
 
 <!--more-->
 

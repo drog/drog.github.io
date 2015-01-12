@@ -4,7 +4,7 @@
  <title>Archblog</title>
  <link href="http://drog.github.io/atom.xml" rel="self"/>
  <link href="http://drog.github.io/"/>
- <updated>2015-01-12T00:08:51-03:00</updated>
+ <updated>2015-01-12T00:17:02-03:00</updated>
  <id>http://drog.github.io</id>
  <author>
    <name>drog</name>
@@ -22,7 +22,7 @@
 &lt;p&gt;Now the process is more simple and easier.
 Just type in the terminal&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://drog.github.io/img/jekyll-bash-test.png&quot; alt=&quot;My helpful screenshot&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/public/img/jekyll-bash-test.png&quot; alt=&quot;Script in action&quot;&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
