@@ -1,46 +1,34 @@
-<div class="col-lg-3 pull-right">
-   <!--  <h4>Search</h4>
-    <div class="hline"></div>
-        <p>
-            <br/>
-            <input type="text" class="form-control" placeholder="Search something">
-        </p>
-    <div class="spacing"></div> -->
-    <h4>Subscribe</h4>
-    <div class="hline"></div>
-        <p>
-            <p class="rss-subscribe">Subscribe to this blog <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>.</p>
-        </p>
-    <div class="spacing"></div>
-    <h4>Categories</h4>
-    <div class="hline"></div>
-    {% for categories in site.categories %}{% unless categories.first == "blog" %}
-        <p>
-            <a href="{{ '/category/#'  | prepend: site.baseurl  }}{{ categories | first }}"><i class="fa fa-angle-right"></i> {{ categories | first | capitalize }}</a>
-            <span class="badge badge-theme pull-right">{{ categories | last | size }}</span>
-        </p>
-    {% endunless %}{% endfor %}
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
 
-    <div class="spacing"></div>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
-    <h4>Recent Posts</h4>
-    <div class="hline"></div>
-        <ul class="popular-posts">
-            {% for post in site.categories['blog'] limit:4 %}
-            <li>
-                    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-                <em>Posted on {{ post.date | date_to_string }}</em>
-            </li>
-            {% endfor %}
-        </ul>
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
 
-    <div class="spacing"></div>
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
 
-    <h4>Popular Tags</h4>
-    <div class="hline"></div>
-    <p>
-    {% for tags in site.tags %}{% unless tags.first == "blog" %}
-            <a class="btn btn-theme" href="{{ '/tags/#'  | prepend: site.baseurl  }}{{ tags | first }}" role="button">{{ tags | first | capitalize }} ({{ tags | last | size }})</a>
-        {% endunless %}{% endfor %}
-    </p>
+      <a class="sidebar-nav-item" href="{{ site.author.github }}" target="_blank">@GitHub</a>
+    </nav>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
 </div>

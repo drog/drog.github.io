@@ -1,48 +1,31 @@
-### GENERAL SETTINGS ###
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-# Site settings
-title: drog blog
-description: "blog of programming and linux"
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+
+# Setup
+title:            Archblog
+tagline:          blog
+description:      'blog about Archlinux, javascript, Laravel, and more'
+url:              http://drog.github.io
+baseurl:          /
 analytics: UA-45813922-4
-baseurl: "" #important: start with /
-url: "http://drog.github.io/"
-
-# Build settings
-markdown: redcarpet
-highlighter: pygments
-
-exclude: ['README.md','bower.json','package.json','bower_components','node_modules','gulpfile.js','customs']
-permalink: /:categories/:title
-excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
-
-colors:  #in hex code if not noted else
-  primary: "#DE1B1B"
-  primary_rgb: "206,206,206" #rgb of the primary. Needed in some places for the transparency effect.
-  secondary: "#2B2B2B"
-  link: "#DE1B1B"
-  link_hover: "#BBD700"
-  footer_heading: "#F6F6F6"
-  footer_content: "#F6F6F6"
 
 author:
-  name: drog
+  name:           drog
+  url:            http://drog.github.io
+  email:          dreg27@gmail.com
+  github:         https://github.com/drog			
+paginate:         5
 
-
-# Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
-social:
-  - title: github
-    url: https://github.com/drog
-  - title: linkedin
-    url: https://www.linkedin.com/profile/view?id=302314974
+github:
+  repo:           https://github.com/drog/drog.github.io
 
 disqus:
     shortname: 'httpdroggithubio'
 
-assets:
-  cachebust: none
-  gzip: true
-  sources:
-    - assets/js
-    - assets/css
-assets:
-  js_compressor:  uglifier 
+excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
